@@ -1,0 +1,1261 @@
+id,sentence_id,noise_condition,response,target
+1,16,-4 SNR,tooth fairy,"I had a box of matches with me, too"
+1,27,clear,the therapist did give me a series of tests,The therapists did give me a series of tests
+1,12,clear,my mom was smart and had a sharp tongue but i,My mom was smart and had a sharp tongue
+1,26,-4 SNR,they were decent,Abel basically lived with us from then on.
+1,5,-4 SNR,there were two things i loved most fire and lead,The two things I loved most were fire and knives.
+1,28,clear,cause i could always find loopholes in the law,Because I could always find loopholes in the law
+1,30,+2 SNR,if only my mom knew this,"Man, if only my mom hit me like this"
+1,23,clear,he and my mom got into a huge fight,He and my mom got into a huge fight.
+1,17,-4 SNR,at one point we took a break to go get a snack,At one point we took a break to go get a snack
+1,13,-4 SNR,when it came to disputes catholic school knew to charge,"When it came to discipline, Catholic school was no joke"
+1,21,clear,why did i keep misbehavimg,Why did I keep misbehaving?
+1,20,+2 SNR,thing catch fire sometimes,Things catch fire sometimes.
+1,2,-4 SNR,i loved and i especially loved fireworks,I loved fire and I especially loved fireworks
+1,4,+2 SNR,i was hyperactive too,"I was hyperactive, too"
+1,3,+2 SNR,they called me the rubbish bin of the family,They called me the rubbish bin of the family
+1,15,+2 SNR,i didnt get into trouble with my mom when it happened,I didn’t get into trouble with my mom when it happened
+1,11,+2 SNR,black peoples dogs dont play fetch,Black people's dogs don't play fetch
+1,10,clear,why doesnt your mother buy it for you,Why doesn’t your mother buy it for you?
+1,29,clear,a kid was bullying me,A kid was bullying me
+1,8,+2 SNR,my mom was forever trying to reign me in,My mom was forever trying to rein me in.
+1,6,clear,go to the bathroom and look at yourself,Go to the bathroom and look at yourself.
+1,1,-4 SNR,my eyebrows were gone,My eyebrows were gone
+1,22,-4 SNR,my family came home and,The white family came home and stood on the street
+1,19,clear,the lawyer in me maintains that im completely innocent,The lawyer in me maintains that I am completely innocent
+1,7,+2 SNR,son was laughing while we were hitting him,Your son was laughing while we were hitting him.
+1,24,-4 SNR,thats why theres a fire,That’s why there’s a fire brigade
+1,18,+2 SNR,one of my uncles stopped calling me trevor,One of my uncles stopped calling me Trevor
+1,25,-4 SNR,the kicked abel out of the garage,They kicked Abel out of the garage
+1,9,+2 SNR,and id play with her son whenever we stayed there,And I’d play with her son whenever we stayed there
+1,14,clear,in my mind i wasnt breaking the rules,"In my mind, I wasn’t breaking the rules"
+2,30,+2 SNR,if only my mom had knew this,"Man, if only my mom hit me like this"
+2,16,-4 SNR,the evening,"I had a box of matches with me, too"
+2,3,+2 SNR,they called me the rubbish bin of the family,They called me the rubbish bin of the family
+2,13,-4 SNR,"when it came to disagree, catholics knew","When it came to discipline, Catholic school was no joke"
+2,8,clear,my mom was forever trying to reign me in,My mom was forever trying to rein me in.
+2,7,-4 SNR,the way your son was laughing while we were hitting it off,Your son was laughing while we were hitting him.
+2,22,+2 SNR,"the white family came home, and stood on the streets",The white family came home and stood on the street
+2,14,-4 SNR,in my mind i was breaking loose,"In my mind, I wasn’t breaking the rules"
+2,28,clear,cause i could always find loopholes in the law,Because I could always find loopholes in the law
+2,17,-4 SNR,"at one point, i took a break to go get a snack",At one point we took a break to go get a snack
+2,20,-4 SNR,things catch fire so many times,Things catch fire sometimes.
+2,6,+2 SNR,go to the bathroom and look at yourself,Go to the bathroom and look at yourself.
+2,26,clear,abel basically lived with us from then on,Abel basically lived with us from then on.
+2,29,-4 SNR,the kid was bleeding out,A kid was bullying me
+2,5,+2 SNR,the two things i loved most were fire and madness,The two things I loved most were fire and knives.
+2,12,clear,my mom was smart and had a sharp tongue but,My mom was smart and had a sharp tongue
+2,11,clear,black peoples dogs dont play fetch,Black people's dogs don't play fetch
+2,15,+2 SNR,i hadnt get into trouble with my mom when it happened,I didn’t get into trouble with my mom when it happened
+2,23,-4 SNR,he and my mom went into a huge fight,He and my mom got into a huge fight.
+2,2,+2 SNR,i loved fire and i especially loved fireworks,I loved fire and I especially loved fireworks
+2,27,clear,the therapists did give me a series of tests,The therapists did give me a series of tests
+2,25,+2 SNR,they kicked abel out of the garage,They kicked Abel out of the garage
+2,9,clear,and id played with her son whenever we stayed there,And I’d play with her son whenever we stayed there
+2,19,clear,the lawyer in me maintains that i am completely innocent,The lawyer in me maintains that I am completely innocent
+2,18,-4 SNR,one of my uncles stopped calling me trevor,One of my uncles stopped calling me Trevor
+2,24,+2 SNR,that's why there's a fire,That’s why there’s a fire brigade
+2,4,-4 SNR,i was bagged too,"I was hyperactive, too"
+2,10,clear,why doesnt your mother buy it for you,Why doesn’t your mother buy it for you?
+2,21,+2 SNR,why did i keep misbehaving,Why did I keep misbehaving?
+2,1,clear,my eyebrows were gone,My eyebrows were gone
+3,22,clear,the white family came home and stood on the street,The white family came home and stood on the street
+3,2,+2 SNR,i loved fire and i especially loved fireworks,I loved fire and I especially loved fireworks
+3,25,+2 SNR,they kick abel out of the garage,They kicked Abel out of the garage
+3,27,-4 SNR,the therapist did give me a series of tests,The therapists did give me a series of tests
+3,23,-4 SNR,me and my mom got into a huge fight,He and my mom got into a huge fight.
+3,7,clear,your son was laughing while we were hitting him,Your son was laughing while we were hitting him.
+3,16,-4 SNR,i had matches with them too,"I had a box of matches with me, too"
+3,9,+2 SNR,and i played with her son whenever we stayed there,And I’d play with her son whenever we stayed there
+3,29,-4 SNR,the kid was bullied,A kid was bullying me
+3,18,-4 SNR,one of my uncles stopped calling me trevor,One of my uncles stopped calling me Trevor
+3,19,+2 SNR,the lawyer in me maintains that im completely innocent,The lawyer in me maintains that I am completely innocent
+3,1,+2 SNR,my eyebrows were gone,My eyebrows were gone
+3,11,+2 SNR,black peoples dogs dont play fetch,Black people's dogs don't play fetch
+3,4,clear,i was hyperactive too,"I was hyperactive, too"
+3,30,-4 SNR,i phoned my mom at the house,"Man, if only my mom hit me like this"
+3,15,clear,i didnt get into trouble with my mom when it happened,I didn’t get into trouble with my mom when it happened
+3,8,+2 SNR,my mom was forever trying to reign me in,My mom was forever trying to rein me in.
+3,13,clear,when it came to decipline catholic school was no joke,"When it came to discipline, Catholic school was no joke"
+3,3,clear,they called me the rubbish bin of the family,They called me the rubbish bin of the family
+3,21,-4 SNR,why did they keep misbehaving,Why did I keep misbehaving?
+3,6,+2 SNR,go to the bathroom and look at yourself,Go to the bathroom and look at yourself.
+3,28,+2 SNR,cause i could always find loopholes in the law,Because I could always find loopholes in the law
+3,14,+2 SNR,in my mind i wasnt breaking rules,"In my mind, I wasn’t breaking the rules"
+3,12,-4 SNR,i was smart at that time,My mom was smart and had a sharp tongue
+3,24,-4 SNR,thats why theres a fire alarm in there,That’s why there’s a fire brigade
+3,17,clear,at one point we took a break to go get a snack,At one point we took a break to go get a snack
+3,26,clear,abel basically lived with us from then on,Abel basically lived with us from then on.
+3,5,clear,the two things i loved most were fires and knives,The two things I loved most were fire and knives.
+3,10,-4 SNR,why doesnt your mother buy it for you,Why doesn’t your mother buy it for you?
+3,20,clear,things catch fire sometimes,Things catch fire sometimes.
+4,16,clear,box of matches with me two.,"I had a box of matches with me, too"
+4,12,-4 SNR,my mothers socks it shocked her.,My mom was smart and had a sharp tongue
+4,26,-4 SNR,pebel basically lived with us.,Abel basically lived with us from then on.
+4,29,clear,a kid was bullying him,A kid was bullying me
+4,6,+2 SNR,go to the bathroom and look it yourself,Go to the bathroom and look at yourself.
+4,2,clear,i loved fire and specially loved fireworks,I loved fire and I especially loved fireworks
+4,28,-4 SNR,cause i could always find,Because I could always find loopholes in the law
+4,27,+2 SNR,the therapists did give me a serious test,The therapists did give me a series of tests
+4,1,clear,my eyebrows were gone,My eyebrows were gone
+4,30,-4 SNR,if only my mom waxed,"Man, if only my mom hit me like this"
+4,25,clear,they kicked able out of the garage,They kicked Abel out of the garage
+4,10,+2 SNR,why doesnt your mother buy it for you,Why doesn’t your mother buy it for you?
+4,14,+2 SNR,in my mind i wasnt breaking the rules,"In my mind, I wasn’t breaking the rules"
+4,11,-4 SNR,black people dogs dont play fetch,Black people's dogs don't play fetch
+4,13,clear,when it came to discipline catholic school was no joke,"When it came to discipline, Catholic school was no joke"
+4,18,-4 SNR,one of my uncles stopped calling the trip,One of my uncles stopped calling me Trevor
+4,8,clear,my mom was forever trying to rain me in,My mom was forever trying to rein me in.
+4,21,+2 SNR,why did i keep misbehaving,Why did I keep misbehaving?
+4,19,-4 SNR,loyal in maintains im completely insecure,The lawyer in me maintains that I am completely innocent
+4,15,-4 SNR,i didnt get into trouble with my mom,I didn’t get into trouble with my mom when it happened
+4,5,clear,the two things i loved most were fire and knives,The two things I loved most were fire and knives.
+4,22,clear,the white family came home and stood on the streets,The white family came home and stood on the street
+4,20,clear,things catch fire sometimes the,Things catch fire sometimes.
+4,17,+2 SNR,at one point we took the break to get a snacks,At one point we took a break to go get a snack
+4,23,+2 SNR,he and my mom got in the huge flight,He and my mom got into a huge fight.
+4,7,+2 SNR,way of her son was laughing why we were hitting him,Your son was laughing while we were hitting him.
+4,4,+2 SNR,i was hyperactive two,"I was hyperactive, too"
+4,3,-4 SNR,they called me rubishbanobosam,They called me the rubbish bin of the family
+4,24,-4 SNR,thats why there is a fire mark,That’s why there’s a fire brigade
+4,9,+2 SNR,and i played with her son whenever we stayed there,And I’d play with her son whenever we stayed there
+5,3,clear,the called me the rubbish bin of the family,They called me the rubbish bin of the family
+5,30,-4 SNR,background noise,"Man, if only my mom hit me like this"
+5,23,clear,hmy mom got into a huge fight,He and my mom got into a huge fight.
+5,25,+2 SNR,they kicked a lot of the garage,They kicked Abel out of the garage
+5,29,-4 SNR,background noise,A kid was bullying me
+5,18,-4 SNR,one of my uncles,One of my uncles stopped calling me Trevor
+5,28,+2 SNR,ce i could only find,Because I could always find loopholes in the law
+5,1,-4 SNR,ggg,My eyebrows were gone
+5,2,-4 SNR,lmm,I loved fire and I especially loved fireworks
+5,17,-4 SNR,at one point he took a break,At one point we took a break to go get a snack
+5,7,+2 SNR,sas laughing,Your son was laughing while we were hitting him.
+5,5,clear,itwo things i loved most was fight and knives,The two things I loved most were fire and knives.
+5,20,clear,ts catch fire sometimes,Things catch fire sometimes.
+5,14,-4 SNR,thin,"In my mind, I wasn’t breaking the rules"
+5,26,+2 SNR,ale lived,Abel basically lived with us from then on.
+5,15,-4 SNR,nljk,I didn’t get into trouble with my mom when it happened
+5,24,clear,njlkf,That’s why there’s a fire brigade
+5,21,clear,why did i keep misbehaving,Why did I keep misbehaving?
+5,12,-4 SNR,mlk,My mom was smart and had a sharp tongue
+5,16,+2 SNR,gth,"I had a box of matches with me, too"
+5,11,clear,black peoples dogs dont play flitch,Black people's dogs don't play fetch
+5,10,+2 SNR,why does not your mother buy a thing,Why doesn’t your mother buy it for you?
+5,19,clear,the loyal in my maintain am completely innocents,The lawyer in me maintains that I am completely innocent
+5,13,+2 SNR,hkj,"When it came to discipline, Catholic school was no joke"
+5,9,+2 SNR,hj,And I’d play with her son whenever we stayed there
+5,4,clear,hyperactive,"I was hyperactive, too"
+5,6,+2 SNR,go to the bathroomand look at yourself,Go to the bathroom and look at yourself.
+5,27,clear,the therapist did give me a series of tips,The therapists did give me a series of tests
+5,22,-4 SNR,evn o and whora,The white family came home and stood on the street
+5,8,+2 SNR,mom almost rained me,My mom was forever trying to rein me in.
+6,15,-4 SNR,i began to get in trouble with my mom and dad,I didn’t get into trouble with my mom when it happened
+6,5,-4 SNR,"there are two things i love the most, fire and knives",The two things I loved most were fire and knives.
+6,20,+2 SNR,things catch fire sometimes,Things catch fire sometimes.
+6,8,clear,my mom was forever trying to reign me in,My mom was forever trying to rein me in.
+6,18,-4 SNR,one of my uncles stopped calling me trevor,One of my uncles stopped calling me Trevor
+6,10,clear,why doesn't your mother buy it for you,Why doesn’t your mother buy it for you?
+6,13,clear,"when it came to discipline, catholic school was no joke","When it came to discipline, Catholic school was no joke"
+6,7,+2 SNR,your son was laughing while we were hitting him,Your son was laughing while we were hitting him.
+6,2,-4 SNR,i especially loved fire pits,I loved fire and I especially loved fireworks
+6,3,clear,they called me the rubbish bin of the family,They called me the rubbish bin of the family
+6,11,-4 SNR,people's dogs don't play fetch,Black people's dogs don't play fetch
+6,12,+2 SNR,my mom was smart and had a sharp tongue,My mom was smart and had a sharp tongue
+6,16,clear,i had a box of matches with me too,"I had a box of matches with me, too"
+6,30,+2 SNR,if only my mom had heard this,"Man, if only my mom hit me like this"
+6,26,-4 SNR,reach,Abel basically lived with us from then on.
+6,17,+2 SNR,"at one point, we took a break to go get a snack",At one point we took a break to go get a snack
+6,25,-4 SNR,they kicked abel out of the garage,They kicked Abel out of the garage
+6,21,-4 SNR,i think he misbehaved,Why did I keep misbehaving?
+6,9,-4 SNR,i played with her son whenever we stayed,And I’d play with her son whenever we stayed there
+6,22,+2 SNR,the white family came home and stood on the street,The white family came home and stood on the street
+6,28,clear,cause i could always find loopholes in the law,Because I could always find loopholes in the law
+6,6,clear,go to the bathroom and look at yourself,Go to the bathroom and look at yourself.
+6,4,+2 SNR,i was hyperactive too,"I was hyperactive, too"
+6,29,clear,the kid was bullying me,A kid was bullying me
+6,27,+2 SNR,the therapist did give me a series of tips,The therapists did give me a series of tests
+6,24,clear,that's why there's a fire brigade,That’s why there’s a fire brigade
+6,14,clear,"in my mind, i wasn't breaking the rules","In my mind, I wasn’t breaking the rules"
+6,19,+2 SNR,the lawyer maintains that i am completely innocent,The lawyer in me maintains that I am completely innocent
+6,23,-4 SNR,he and my mom got into a huge fight,He and my mom got into a huge fight.
+6,1,+2 SNR,my eyebrows were gone,My eyebrows were gone
+7,28,+2 SNR,i could always find a new ....,Because I could always find loopholes in the law
+7,2,+2 SNR,....,I loved fire and I especially loved fireworks
+7,19,clear,the lawyer maintains that i am completely innocent,The lawyer in me maintains that I am completely innocent
+7,5,-4 SNR,...,The two things I loved most were fire and knives.
+7,4,+2 SNR,...,"I was hyperactive, too"
+7,9,clear,and i played with her son whenever we stayed there,And I’d play with her son whenever we stayed there
+7,16,+2 SNR,i had a box of matches,"I had a box of matches with me, too"
+7,13,+2 SNR,NA,"When it came to discipline, Catholic school was no joke"
+7,21,-4 SNR,NA,Why did I keep misbehaving?
+7,17,clear,at one point i  took a break to go get a snack,At one point we took a break to go get a snack
+7,7,+2 SNR,laughing while we were,Your son was laughing while we were hitting him.
+7,1,clear,my eyebrows were  gone,My eyebrows were gone
+7,24,clear,that's why there is a ...,That’s why there’s a fire brigade
+7,15,-4 SNR,NA,I didn’t get into trouble with my mom when it happened
+7,14,-4 SNR,NA,"In my mind, I wasn’t breaking the rules"
+7,29,clear,NA,A kid was bullying me
+7,27,-4 SNR,NA,The therapists did give me a series of tests
+7,23,-4 SNR,NA,He and my mom got into a huge fight.
+7,26,-4 SNR,NA,Abel basically lived with us from then on.
+7,30,clear,NA,"Man, if only my mom hit me like this"
+7,3,-4 SNR,i,They called me the rubbish bin of the family
+7,10,+2 SNR,why dosent you mother buy this for you,Why doesn’t your mother buy it for you?
+7,12,+2 SNR,my mom is smart,My mom was smart and had a sharp tongue
+7,8,+2 SNR,NA,My mom was forever trying to rein me in.
+7,18,+2 SNR,one of my uncles stopped,One of my uncles stopped calling me Trevor
+7,25,-4 SNR,NA,They kicked Abel out of the garage
+7,6,clear,go to the bathroom and look at yourself,Go to the bathroom and look at yourself.
+7,22,clear,came home ... and stood on the,The white family came home and stood on the street
+7,20,-4 SNR,was petrified,Things catch fire sometimes.
+7,11,clear,people's dogs dont play fetch,Black people's dogs don't play fetch
+8,9,-4 SNR,loud noise,And I’d play with her son whenever we stayed there
+8,28,clear,law,Because I could always find loopholes in the law
+8,1,+2 SNR,eyebrow,My eyebrows were gone
+8,8,clear,rain,My mom was forever trying to rein me in.
+8,24,+2 SNR,fire,That’s why there’s a fire brigade
+8,15,clear,trouble,I didn’t get into trouble with my mom when it happened
+8,4,+2 SNR,hyper,"I was hyperactive, too"
+8,6,+2 SNR,bathroom look at yourself,Go to the bathroom and look at yourself.
+8,17,-4 SNR,took a break,At one point we took a break to go get a snack
+8,29,clear,kid was bullying me,A kid was bullying me
+8,7,+2 SNR,son was laughing at me while he was hit me,Your son was laughing while we were hitting him.
+8,23,clear,he and mom got into a big fight,He and my mom got into a huge fight.
+8,21,-4 SNR,behaviour,Why did I keep misbehaving?
+8,5,+2 SNR,the to two i like the most was fire and matches,The two things I loved most were fire and knives.
+8,11,+2 SNR,black people dogs dont play flesh,Black people's dogs don't play fetch
+8,22,clear,white family told on the streets,The white family came home and stood on the street
+8,10,clear,why does your mother buy it for you,Why doesn’t your mother buy it for you?
+8,27,-4 SNR,i dont know,The therapists did give me a series of tests
+8,20,+2 SNR,thing catch fire sometimes,Things catch fire sometimes.
+8,14,-4 SNR,i dont know,"In my mind, I wasn’t breaking the rules"
+8,30,+2 SNR,only my mom,"Man, if only my mom hit me like this"
+8,3,clear,the called me the rubbish of the family,They called me the rubbish bin of the family
+8,2,-4 SNR,specially love fire place,I loved fire and I especially loved fireworks
+8,12,clear,my mom was smart,My mom was smart and had a sharp tongue
+8,13,-4 SNR,good evening,"When it came to discipline, Catholic school was no joke"
+8,16,-4 SNR,i dont know,"I had a box of matches with me, too"
+8,18,-4 SNR,one my uncles,One of my uncles stopped calling me Trevor
+8,19,clear,the lawers said i am complete innocent,The lawyer in me maintains that I am completely innocent
+8,25,-4 SNR,i dont know,They kicked Abel out of the garage
+8,26,+2 SNR,gable live with us,Abel basically lived with us from then on.
+9,2,+2 SNR,i love fire and i especially loved fireworks,I loved fire and I especially loved fireworks
+9,18,-4 SNR,one of my uncles stopped calling me trevor,One of my uncles stopped calling me Trevor
+9,14,-4 SNR,in my mind it wasnt breaing news,"In my mind, I wasn’t breaking the rules"
+9,19,-4 SNR,lawyer maintains that i,The lawyer in me maintains that I am completely innocent
+9,30,-4 SNR,only my mom knows this,"Man, if only my mom hit me like this"
+9,4,-4 SNR,it was my bad,"I was hyperactive, too"
+9,20,+2 SNR,things catch fire sometimes,Things catch fire sometimes.
+9,5,+2 SNR,the two things i loved most was fire and max,The two things I loved most were fire and knives.
+9,9,clear,and i played with her son whenever we stayed there,And I’d play with her son whenever we stayed there
+9,13,-4 SNR,when it came to discipline the catholics,"When it came to discipline, Catholic school was no joke"
+9,29,+2 SNR,the kid was bullied,A kid was bullying me
+9,17,+2 SNR,at one point we took a break to get a snack,At one point we took a break to go get a snack
+9,1,clear,my eyebrows were gone,My eyebrows were gone
+9,26,+2 SNR,able basically lived with us from then on,Abel basically lived with us from then on.
+9,25,-4 SNR,they kept able at the garage,They kicked Abel out of the garage
+9,10,-4 SNR,why doesn't your mother buy it for youslash,Why doesn’t your mother buy it for you?
+9,24,clear,thats why there is a fire brigade,That’s why there’s a fire brigade
+9,21,+2 SNR,why did i keep bisbehaving,Why did I keep misbehaving?
+9,6,-4 SNR,go to the bathroom and look at yourself,Go to the bathroom and look at yourself.
+9,7,clear,your son was laughing while he was hitting him,Your son was laughing while we were hitting him.
+9,22,clear,the white family came home and stood on the streets,The white family came home and stood on the street
+9,27,clear,the therapists did give me a series of tests,The therapists did give me a series of tests
+9,3,+2 SNR,they called me the rubbish bin of the family,They called me the rubbish bin of the family
+9,16,clear,i had a box of matches with me too,"I had a box of matches with me, too"
+9,15,-4 SNR,i didnt get in trouble with my mother a lot,I didn’t get into trouble with my mom when it happened
+9,11,clear,black peoples dogs dont play fetch,Black people's dogs don't play fetch
+9,28,+2 SNR,cuz i could always find loopholes within it,Because I could always find loopholes in the law
+9,23,clear,he and my mom got into a huge fight,He and my mom got into a huge fight.
+9,8,+2 SNR,my mom was forever trying to reign me in,My mom was forever trying to rein me in.
+9,12,clear,my mom was smart and had a short tongue but,My mom was smart and had a sharp tongue
+10,13,-4 SNR,when it came to captain district,"When it came to discipline, Catholic school was no joke"
+10,10,-4 SNR,why doesn't your mother buy it for you,Why doesn’t your mother buy it for you?
+10,5,clear,the two things i loved the most were fire and knives,The two things I loved most were fire and knives.
+10,22,+2 SNR,the white family came home and stood on the street,The white family came home and stood on the street
+10,9,clear,and i played with her son whenever we stayed there,And I’d play with her son whenever we stayed there
+10,7,-4 SNR,summer while we were hitting,Your son was laughing while we were hitting him.
+10,3,+2 SNR,NA,They called me the rubbish bin of the family
+10,29,clear,they called me the rubbish bin of the family they bullied me,A kid was bullying me
+10,20,clear,things catch fire sometimes,Things catch fire sometimes.
+10,12,-4 SNR,smart shocked family,My mom was smart and had a sharp tongue
+10,6,-4 SNR,go to the bathroom and look at yourself,Go to the bathroom and look at yourself.
+10,4,clear,i was hyperactive too,"I was hyperactive, too"
+10,25,+2 SNR,they kicked abel out of the garage,They kicked Abel out of the garage
+10,27,clear,the therapist did give me a series of tests,The therapists did give me a series of tests
+10,19,-4 SNR,the lawyer maintains,The lawyer in me maintains that I am completely innocent
+10,14,clear,in my mind i wasn't breaking the rules,"In my mind, I wasn’t breaking the rules"
+10,2,-4 SNR,nice especially fire place,I loved fire and I especially loved fireworks
+10,15,clear,i didn't get into trouble with my mom when it happened,I didn’t get into trouble with my mom when it happened
+10,21,+2 SNR,why did i keep misbehaving,Why did I keep misbehaving?
+10,23,clear,herein my mom got into huge fights,He and my mom got into a huge fight.
+10,24,+2 SNR,that's why there's a fire place,That’s why there’s a fire brigade
+10,17,-4 SNR,at one point we took a break to get a snack,At one point we took a break to go get a snack
+10,8,+2 SNR,my mom was forever turning a rain near,My mom was forever trying to rein me in.
+10,1,-4 SNR,oh god,My eyebrows were gone
+10,28,+2 SNR,cause i could always find loophole in the rules,Because I could always find loopholes in the law
+10,11,+2 SNR,black people's dogs don't play fetch,Black people's dogs don't play fetch
+10,16,+2 SNR,i had a box of matches with me too,"I had a box of matches with me, too"
+10,30,+2 SNR,tell me my mommy i like this,"Man, if only my mom hit me like this"
+10,26,clear,abel basically lived with us from then on,Abel basically lived with us from then on.
+10,18,-4 SNR,one of my uncles stopped calling me trevor,One of my uncles stopped calling me Trevor
+11,13,clear,when it came to catholic school it was not a joke,"When it came to discipline, Catholic school was no joke"
+11,3,-4 SNR,i could not hear it clearly,They called me the rubbish bin of the family
+11,4,+2 SNR,i was back at 2,"I was hyperactive, too"
+11,12,-4 SNR,could hear it clearly,My mom was smart and had a sharp tongue
+11,27,-4 SNR,give me a series of test,The therapists did give me a series of tests
+11,6,+2 SNR,go the bench go look at yourself,Go to the bathroom and look at yourself.
+11,1,clear,my eyebrows where gone,My eyebrows were gone
+11,24,clear,thats why theres a fire brigadge,That’s why there’s a fire brigade
+11,8,-4 SNR,im almost muture from my age,My mom was forever trying to rein me in.
+11,2,-4 SNR,i espcically love fireworks,I loved fire and I especially loved fireworks
+11,21,+2 SNR,why did i keep misbehaving,Why did I keep misbehaving?
+11,28,+2 SNR,because i can always find loopholes,Because I could always find loopholes in the law
+11,14,-4 SNR,in my mind i was good,"In my mind, I wasn’t breaking the rules"
+11,18,clear,one of my uncles stopped calling me trevor he calls me,One of my uncles stopped calling me Trevor
+11,19,+2 SNR,the law claims im compelely incconet,The lawyer in me maintains that I am completely innocent
+11,22,clear,the white family came home to stand on the streets,The white family came home and stood on the street
+11,23,-4 SNR,him and his friend got into a huge fight,He and my mom got into a huge fight.
+11,25,clear,they kick abel out of the gargage,They kicked Abel out of the garage
+11,17,-4 SNR,they took a break to get a straw,At one point we took a break to go get a snack
+11,30,+2 SNR,only when my mom visist,"Man, if only my mom hit me like this"
+11,7,clear,your son was luaghing while we were hitting him,Your son was laughing while we were hitting him.
+11,10,+2 SNR,why doesnt your mom,Why doesn’t your mother buy it for you?
+11,26,-4 SNR,i could not hear it clearly,Abel basically lived with us from then on.
+11,20,clear,things catch fire sometimes,Things catch fire sometimes.
+11,9,+2 SNR,if i did not like her son i would not of stayed there,And I’d play with her son whenever we stayed there
+11,15,+2 SNR,get in trouble when my mom happen,I didn’t get into trouble with my mom when it happened
+11,29,clear,kids were bullying me,A kid was bullying me
+11,16,clear,i had a box of matches with me too,"I had a box of matches with me, too"
+11,5,-4 SNR,there two things in life i like is fire and ice,The two things I loved most were fire and knives.
+11,11,+2 SNR,black peoples dog dont play fetch,Black people's dogs don't play fetch
+12,13,clear,"when it came to discpline, catholic school was no joke","When it came to discipline, Catholic school was no joke"
+12,29,clear,a kid was bullying me,A kid was bullying me
+12,20,clear,things catch fire sometimes,Things catch fire sometimes.
+12,11,-4 SNR,NA,Black people's dogs don't play fetch
+12,9,+2 SNR,and i played with her son whenever we stayed there,And I’d play with her son whenever we stayed there
+12,7,clear,your son was laughing while we were hitting him,Your son was laughing while we were hitting him.
+12,18,+2 SNR,one of my uncles stopped calling me trevor,One of my uncles stopped calling me Trevor
+12,17,+2 SNR,"at one point, we took a break to go get a snack",At one point we took a break to go get a snack
+12,1,+2 SNR,my eyebrows were gone,My eyebrows were gone
+12,14,+2 SNR,in my mind i wasnt breaking rules,"In my mind, I wasn’t breaking the rules"
+12,3,-4 SNR,they called me rubbish...,They called me the rubbish bin of the family
+12,23,-4 SNR,he and my mom got into a huge fight,He and my mom got into a huge fight.
+12,28,-4 SNR,cause i could always find...,Because I could always find loopholes in the law
+12,30,clear,if only my mom hit me like this,"Man, if only my mom hit me like this"
+12,24,clear,thats why there is a fire brigade,That’s why there’s a fire brigade
+12,21,+2 SNR,why did i keep misbehaving,Why did I keep misbehaving?
+12,19,clear,the lawyer in me maintains that i am completely innocent,The lawyer in me maintains that I am completely innocent
+12,26,-4 SNR,able...,Abel basically lived with us from then on.
+12,10,clear,why doesnt your mother buy it for you,Why doesn’t your mother buy it for you?
+12,22,+2 SNR,the white family came home and stood on the street,The white family came home and stood on the street
+12,5,-4 SNR,"there were two things i loved most, fire and mud",The two things I loved most were fire and knives.
+12,25,+2 SNR,they kicked abel out of the garage,They kicked Abel out of the garage
+12,12,-4 SNR,i am smart and i...,My mom was smart and had a sharp tongue
+12,8,-4 SNR,my mom is ... and i ...,My mom was forever trying to rein me in.
+12,27,clear,the therapist did give me a series of tests,The therapists did give me a series of tests
+12,16,-4 SNR,the boxes of matches...,"I had a box of matches with me, too"
+12,15,+2 SNR,i didnt get in trouble with my mom when it happened,I didn’t get into trouble with my mom when it happened
+12,2,+2 SNR,"i loved fire, and i especially loved fireworks",I loved fire and I especially loved fireworks
+12,6,clear,go to the bathroom and look at yourself,Go to the bathroom and look at yourself.
+12,4,-4 SNR,i was at back...,"I was hyperactive, too"
+13,4,+2 SNR,i was hyperactive too,"I was hyperactive, too"
+13,10,-4 SNR,what did your mother do this evening,Why doesn’t your mother buy it for you?
+13,20,-4 SNR,things catch fire sometimes,Things catch fire sometimes.
+13,6,+2 SNR,go to the bathroom and look at yourself,Go to the bathroom and look at yourself.
+13,13,+2 SNR,"when it came to discipline, catholic school was no joke","When it came to discipline, Catholic school was no joke"
+13,2,clear,"i loved fire, and i especially loved fireworks",I loved fire and I especially loved fireworks
+13,24,clear,that's why there's a fire brigade,That’s why there’s a fire brigade
+13,17,clear,at one point we took a break to go get a snack,At one point we took a break to go get a snack
+13,12,+2 SNR,i'm almost smart and have a sharp tongue,My mom was smart and had a sharp tongue
+13,26,+2 SNR,abel basically lived with us from then on,Abel basically lived with us from then on.
+13,1,clear,my eyebrows were gone,My eyebrows were gone
+13,16,-4 SNR,too,"I had a box of matches with me, too"
+13,7,+2 SNR,your son was laughing while we were hitting him,Your son was laughing while we were hitting him.
+13,30,+2 SNR,if only my mom had seen this,"Man, if only my mom hit me like this"
+13,15,clear,i didn't get into trouble with my mom when it happened,I didn’t get into trouble with my mom when it happened
+13,18,-4 SNR,one of my uncles stopped reporting the truth,One of my uncles stopped calling me Trevor
+13,21,+2 SNR,why did i keep misbehaving,Why did I keep misbehaving?
+13,25,+2 SNR,they kicked abel out of the garage,They kicked Abel out of the garage
+13,23,-4 SNR,he and my mom went into a huge fight,He and my mom got into a huge fight.
+13,3,clear,they called me the rubbish bin of the family,They called me the rubbish bin of the family
+13,28,clear,cause i could always find loopholes in the law,Because I could always find loopholes in the law
+13,22,clear,the white family came home and stood on the street,The white family came home and stood on the street
+13,14,-4 SNR,in my mind i wasn't breaking any rules,"In my mind, I wasn’t breaking the rules"
+13,9,+2 SNR,and i played with her son whenever we stayed there,And I’d play with her son whenever we stayed there
+13,27,clear,the therapists did give me a series of tests,The therapists did give me a series of tests
+13,8,-4 SNR,i'm almost trained,My mom was forever trying to rein me in.
+13,5,-4 SNR,the two things i loved the most were fire and mud,The two things I loved most were fire and knives.
+13,19,clear,the lawyer in me maintains that i am completely innocent,The lawyer in me maintains that I am completely innocent
+13,29,-4 SNR,the kids were bullied,A kid was bullying me
+13,11,-4 SNR,black people's dogs don't play fetch,Black people's dogs don't play fetch
+14,30,-4 SNR,phone ordinary,"Man, if only my mom hit me like this"
+14,12,clear,my mom was smart and had a sharp tongue but i,My mom was smart and had a sharp tongue
+14,29,+2 SNR,the kid was bullied,A kid was bullying me
+14,8,+2 SNR,my mom was forever trying to reign me in,My mom was forever trying to rein me in.
+14,27,clear,the therapist did give me a series of tests,The therapists did give me a series of tests
+14,21,+2 SNR,why did i keep misbehaving,Why did I keep misbehaving?
+14,26,-4 SNR,facing,Abel basically lived with us from then on.
+14,20,clear,things catch fire sometimes that,Things catch fire sometimes.
+14,5,+2 SNR,the two things i loved most were fire and mud,The two things I loved most were fire and knives.
+14,25,-4 SNR,that kept abel out of the garage,They kicked Abel out of the garage
+14,10,+2 SNR,why doesnt your mother buy it for you,Why doesn’t your mother buy it for you?
+14,9,clear,and id play with her son whenever we stayed there,And I’d play with her son whenever we stayed there
+14,19,-4 SNR,the lawyer in me maintains that im completely innocent,The lawyer in me maintains that I am completely innocent
+14,28,clear,'cause i could always find loopholes in the law,Because I could always find loopholes in the law
+14,14,-4 SNR,in my mind i wasnt breaking laws,"In my mind, I wasn’t breaking the rules"
+14,23,+2 SNR,he and my mom got into a huge fight,He and my mom got into a huge fight.
+14,11,+2 SNR,black peoples' dogs don't play fetch,Black people's dogs don't play fetch
+14,15,clear,i didn't get into trouble with my mom when it happened,I didn’t get into trouble with my mom when it happened
+14,7,-4 SNR,your son was laughing while we were eating,Your son was laughing while we were hitting him.
+14,13,-4 SNR,when it came to discipline catholic schools were,"When it came to discipline, Catholic school was no joke"
+14,16,-4 SNR,matches the truth,"I had a box of matches with me, too"
+14,6,-4 SNR,go to the bathroom and look at yourself,Go to the bathroom and look at yourself.
+14,22,-4 SNR,the white family came home and stood on the streets,The white family came home and stood on the street
+14,1,clear,my eyebrows were gone,My eyebrows were gone
+14,18,clear,one of my uncles stopped calling me trevor he called,One of my uncles stopped calling me Trevor
+14,3,+2 SNR,they called me the rubbish bin of the family,They called me the rubbish bin of the family
+14,4,clear,i was hyperactive too,"I was hyperactive, too"
+14,24,clear,that's why there's a fire brigade,That’s why there’s a fire brigade
+14,2,+2 SNR,i loved fire and i especially loved fireworks,I loved fire and I especially loved fireworks
+14,17,+2 SNR,at one point they took a break to go get a snack,At one point we took a break to go get a snack
+15,29,clear,kid was bullying me,A kid was bullying me
+15,7,clear,your son was laughing while we were hitting him,Your son was laughing while we were hitting him.
+15,20,clear,things catch fire sometimes,Things catch fire sometimes.
+15,21,+2 SNR,why did i keep missbehaving,Why did I keep misbehaving?
+15,8,-4 SNR,your grandma was premature,My mom was forever trying to rein me in.
+15,15,+2 SNR,NA,I didn’t get into trouble with my mom when it happened
+15,22,-4 SNR,that evening when the white family came home,The white family came home and stood on the street
+15,25,-4 SNR,the kid kicked out of the garage,They kicked Abel out of the garage
+15,19,clear,the lawyer in me maintains that i am completely innocent,The lawyer in me maintains that I am completely innocent
+15,3,+2 SNR,they called me rubbish bin of the family,They called me the rubbish bin of the family
+15,12,-4 SNR,i am smart it shocked me,My mom was smart and had a sharp tongue
+15,1,+2 SNR,my eyebrows were gone,My eyebrows were gone
+15,4,clear,i was  hyperactive too,"I was hyperactive, too"
+15,24,-4 SNR,thats why there is a fire,That’s why there’s a fire brigade
+15,5,clear,two things i loved the most were fire and knives,The two things I loved most were fire and knives.
+15,28,-4 SNR,i could always find the easy,Because I could always find loopholes in the law
+15,14,+2 SNR,in my mind i was not breaking any rules,"In my mind, I wasn’t breaking the rules"
+15,18,+2 SNR,one of my uncles stopped calling me trevor,One of my uncles stopped calling me Trevor
+15,26,-4 SNR,that evening,Abel basically lived with us from then on.
+15,23,clear,he and my mom got into a huge fight,He and my mom got into a huge fight.
+15,10,-4 SNR,where does your mother borrow food from,Why doesn’t your mother buy it for you?
+15,2,-4 SNR,i especially loved fireworks,I loved fire and I especially loved fireworks
+15,9,+2 SNR,i played with her son whenever we stayed there,And I’d play with her son whenever we stayed there
+15,30,clear,if only my mom hot me like this,"Man, if only my mom hit me like this"
+15,6,+2 SNR,got to the bathroom and look at it yourself,Go to the bathroom and look at yourself.
+15,27,+2 SNR,the therapists did give me a series of tips,The therapists did give me a series of tests
+15,16,clear,i had a box of matches with me too,"I had a box of matches with me, too"
+15,13,clear,when it came to disciples the catholic school was no joke,"When it came to discipline, Catholic school was no joke"
+15,17,-4 SNR,he took a break to get a snack,At one point we took a break to go get a snack
+15,11,+2 SNR,dogs don't play fetch,Black people's dogs don't play fetch
+16,11,clear,black people's dogs don't play fetch,Black people's dogs don't play fetch
+16,30,clear,if only my mum hits me like this,"Man, if only my mom hit me like this"
+16,20,-4 SNR,i think it is easy to catch a fire for things like that,Things catch fire sometimes.
+16,14,+2 SNR,in my mind that was like breaking world,"In my mind, I wasn’t breaking the rules"
+16,22,-4 SNR,good evening right family came into the street,The white family came home and stood on the street
+16,10,-4 SNR,why doesn't your mother buy a phone yet,Why doesn’t your mother buy it for you?
+16,8,+2 SNR,my mother is forever trying to ring me up,My mom was forever trying to rein me in.
+16,13,clear,"when it comes to discipline, catholic school was no joke","When it came to discipline, Catholic school was no joke"
+16,17,+2 SNR,"at one point, we took a break to go get a snack",At one point we took a break to go get a snack
+16,24,-4 SNR,there was a firework in the evening,That’s why there’s a fire brigade
+16,5,clear,the two things i love most was fire and knives,The two things I loved most were fire and knives.
+16,21,+2 SNR,why do they keep misbehaviour,Why did I keep misbehaving?
+16,4,+2 SNR,i was happen to have two,"I was hyperactive, too"
+16,15,+2 SNR,i don't want to get in trouble with my mum when it happens,I didn’t get into trouble with my mom when it happened
+16,9,clear,and i will play with my son whenever we stay there,And I’d play with her son whenever we stayed there
+16,23,-4 SNR,my mum was in a huge,He and my mom got into a huge fight.
+16,25,-4 SNR,they keep able out of garage,They kicked Abel out of the garage
+16,27,clear,the therapist did give me a series of tests,The therapists did give me a series of tests
+16,6,-4 SNR,dog look at your size,Go to the bathroom and look at yourself.
+16,3,-4 SNR,they told me it was rubbish bin in the sample,They called me the rubbish bin of the family
+16,29,clear,the kid was bullying me,A kid was bullying me
+16,18,clear,one of my uncles stop calling me trevor,One of my uncles stopped calling me Trevor
+16,26,+2 SNR,mable basically live with us,Abel basically lived with us from then on.
+16,16,clear,i have a box of matches with me too,"I had a box of matches with me, too"
+16,1,+2 SNR,my eyebrows were gone,My eyebrows were gone
+16,7,+2 SNR,my son is laughing while we hitting him,Your son was laughing while we were hitting him.
+16,12,clear,my mum was smart and had a short tongue,My mom was smart and had a sharp tongue
+16,28,+2 SNR,coz i can always loopholes in law,Because I could always find loopholes in the law
+16,2,-4 SNR,i love fire especially love fireworks,I loved fire and I especially loved fireworks
+16,19,-4 SNR,the lawyer we hire maintain in a level,The lawyer in me maintains that I am completely innocent
+17,4,+2 SNR,i was hacked by active tooth,"I was hyperactive, too"
+17,29,clear,the kid was bullying me,A kid was bullying me
+17,13,-4 SNR,when it came to discipline catholic school was it for me,"When it came to discipline, Catholic school was no joke"
+17,10,+2 SNR,why doesn't your mother buy it for you,Why doesn’t your mother buy it for you?
+17,16,+2 SNR,i had a box of matches with me to,"I had a box of matches with me, too"
+17,15,clear,i didn't get into trouble with my mom when it happened,I didn’t get into trouble with my mom when it happened
+17,17,clear,at one point we took a break to go get a snack,At one point we took a break to go get a snack
+17,5,+2 SNR,the two things i loved most fire and ice,The two things I loved most were fire and knives.
+17,11,-4 SNR,black people's dogs dont play fetch,Black people's dogs don't play fetch
+17,7,-4 SNR,well your son was laughing while you were hitting him,Your son was laughing while we were hitting him.
+17,27,+2 SNR,the therapist did give me a series of tests,The therapists did give me a series of tests
+17,14,clear,in my mind i wasn't breaking the rules,"In my mind, I wasn’t breaking the rules"
+17,8,+2 SNR,my mum was forever trying to reign me in,My mom was forever trying to rein me in.
+17,2,+2 SNR,i loved fire i especially loved fireworks,I loved fire and I especially loved fireworks
+17,9,-4 SNR,i ate some whenever we stayed out,And I’d play with her son whenever we stayed there
+17,24,clear,that's why there is a fire brigade,That’s why there’s a fire brigade
+17,22,+2 SNR,the white family came home and stood on the street,The white family came home and stood on the street
+17,19,clear,the lawyer in me maintains that i'm completely innoccent,The lawyer in me maintains that I am completely innocent
+17,20,+2 SNR,things catch fire sometimes,Things catch fire sometimes.
+17,18,-4 SNR,one of my uncles stopped calling me trevor,One of my uncles stopped calling me Trevor
+17,21,-4 SNR,why did they keep misbehaving,Why did I keep misbehaving?
+17,28,clear,cuz i could always find loopholes in the law,Because I could always find loopholes in the law
+17,6,-4 SNR,go to the bathroom and look at yourself,Go to the bathroom and look at yourself.
+17,3,clear,they called me the rubbish bin of the family,They called me the rubbish bin of the family
+17,1,clear,my eyebrows were gone,My eyebrows were gone
+17,26,-4 SNR,NA,Abel basically lived with us from then on.
+17,30,clear,if only my mom hit me like this,"Man, if only my mom hit me like this"
+17,25,+2 SNR,they kicked abel out of the garage,They kicked Abel out of the garage
+17,23,-4 SNR,he and my mum got into huge fights,He and my mom got into a huge fight.
+17,12,-4 SNR,my mum was smart and had a sharp tongue,My mom was smart and had a sharp tongue
+18,14,-4 SNR,in my mind i was,"In my mind, I wasn’t breaking the rules"
+18,26,clear,abel basically lived with us from then on,Abel basically lived with us from then on.
+18,20,clear,things catch fire sometimes,Things catch fire sometimes.
+18,3,-4 SNR,they called my rubbish,They called me the rubbish bin of the family
+18,27,clear,the therapists did give me a series of tests,The therapists did give me a series of tests
+18,1,clear,my eyebrows were gone,My eyebrows were gone
+18,9,+2 SNR,and i would play with her son whenever we stayed there,And I’d play with her son whenever we stayed there
+18,2,-4 SNR,i loved i especially loved fireworks,I loved fire and I especially loved fireworks
+18,22,-4 SNR,white family came home and,The white family came home and stood on the street
+18,5,+2 SNR,the two things i loved most were fired and mags,The two things I loved most were fire and knives.
+18,8,clear,my mom was forever trying to rain me in,My mom was forever trying to rein me in.
+18,18,-4 SNR,one of my uncles stopped calling me trevor,One of my uncles stopped calling me Trevor
+18,16,-4 SNR,too,"I had a box of matches with me, too"
+18,28,clear,cause i could always find loopholes in the law,Because I could always find loopholes in the law
+18,25,+2 SNR,they kicked abel out of the garage,They kicked Abel out of the garage
+18,4,-4 SNR,NA,"I was hyperactive, too"
+18,13,+2 SNR,when it came to discipline catholic school was no joke,"When it came to discipline, Catholic school was no joke"
+18,11,+2 SNR,black peoples dogs dont play fetch,Black people's dogs don't play fetch
+18,19,+2 SNR,the lawyer in me maintains that i am completely innocent,The lawyer in me maintains that I am completely innocent
+18,12,clear,my mom was sharp and had a sharp tongue,My mom was smart and had a sharp tongue
+18,17,+2 SNR,at one point we took a break to go get a snack,At one point we took a break to go get a snack
+18,15,clear,i had only get into trouble with mom when it happened,I didn’t get into trouble with my mom when it happened
+18,21,+2 SNR,why did i keep misbehaving,Why did I keep misbehaving?
+18,6,clear,go to the bathroom and look at yourself,Go to the bathroom and look at yourself.
+18,7,-4 SNR,your son was laughing while we were eating,Your son was laughing while we were hitting him.
+18,30,+2 SNR,if only my mom hit me like this,"Man, if only my mom hit me like this"
+18,29,+2 SNR,the kid was bullied,A kid was bullying me
+18,24,-4 SNR,thats why theres a firemark,That’s why there’s a fire brigade
+18,23,clear,he and my mom got into a huge fight,He and my mom got into a huge fight.
+18,10,-4 SNR,why doesnt your mother buy it for you,Why doesn’t your mother buy it for you?
+19,8,+2 SNR,my mom was forever trying to reign me in,My mom was forever trying to rein me in.
+19,12,clear,my mom was smart and had a sharp tounge but,My mom was smart and had a sharp tongue
+19,23,+2 SNR,he and my mom got into a huge fight,He and my mom got into a huge fight.
+19,17,-4 SNR,at one point we took a break to get a snack,At one point we took a break to go get a snack
+19,14,-4 SNR,in my mind i was,"In my mind, I wasn’t breaking the rules"
+19,11,+2 SNR,black peoples dogs dont play fetch,Black people's dogs don't play fetch
+19,4,+2 SNR,i wa hyperactive too,"I was hyperactive, too"
+19,2,-4 SNR,i loved ... and i especially loved firepits,I loved fire and I especially loved fireworks
+19,28,-4 SNR,and i could always find him,Because I could always find loopholes in the law
+19,16,-4 SNR,too,"I had a box of matches with me, too"
+19,18,+2 SNR,one of my uncles stopped calling me trevor,One of my uncles stopped calling me Trevor
+19,7,-4 SNR,son was laughing while we were hitting,Your son was laughing while we were hitting him.
+19,10,-4 SNR,why doesnt your mother buy it for you,Why doesn’t your mother buy it for you?
+19,15,clear,i didnt get into trouble with my mom when it happened,I didn’t get into trouble with my mom when it happened
+19,13,clear,whem it came to discipline catholic school was no joke,"When it came to discipline, Catholic school was no joke"
+19,27,clear,the therapist did give me a series of tests,The therapists did give me a series of tests
+19,30,+2 SNR,if only my mom ... this,"Man, if only my mom hit me like this"
+19,21,clear,why did i keep misbehaving,Why did I keep misbehaving?
+19,25,-4 SNR,they kicked abel out of the garage,They kicked Abel out of the garage
+19,3,clear,the called me the rubbish bin of the family,They called me the rubbish bin of the family
+19,5,clear,the two things i loved most were fire and knives,The two things I loved most were fire and knives.
+19,19,+2 SNR,the lawyer in me mantains that im completely innocent,The lawyer in me maintains that I am completely innocent
+19,29,clear,the kid was bullying me,A kid was bullying me
+19,9,clear,and i played with her son whenever we stayed there,And I’d play with her son whenever we stayed there
+19,26,+2 SNR,abel basically lived with us from then on,Abel basically lived with us from then on.
+19,24,+2 SNR,thats why theres a firepiy,That’s why there’s a fire brigade
+19,20,-4 SNR,things catch fire,Things catch fire sometimes.
+19,1,-4 SNR,my eybrows were gone,My eyebrows were gone
+19,6,+2 SNR,go to the bathroom and look at yourself,Go to the bathroom and look at yourself.
+19,22,clear,the white family came home and stood on the streets,The white family came home and stood on the street
+20,30,-4 SNR,mom,"Man, if only my mom hit me like this"
+20,28,+2 SNR,cause i could always find loopholes,Because I could always find loopholes in the law
+20,10,clear,why don't your mother buy it for you,Why doesn’t your mother buy it for you?
+20,29,+2 SNR,the kid was pulling,A kid was bullying me
+20,24,clear,that's why there is a fire brigade,That’s why there’s a fire brigade
+20,22,+2 SNR,the white family came home and stood on the street,The white family came home and stood on the street
+20,14,clear,in my mind i wasn't breaking the rules,"In my mind, I wasn’t breaking the rules"
+20,27,clear,the therapists did give me a series of testsm,The therapists did give me a series of tests
+20,3,-4 SNR,they called me rubbish,They called me the rubbish bin of the family
+20,19,+2 SNR,the laywer maintains that i'm completely innocent,The lawyer in me maintains that I am completely innocent
+20,17,-4 SNR,at one point we took a break to get a snack,At one point we took a break to go get a snack
+20,11,+2 SNR,black people's dogs don't play fetch,Black people's dogs don't play fetch
+20,5,+2 SNR,"the two things i loved most, fire and",The two things I loved most were fire and knives.
+20,7,-4 SNR,the son was laughing while we were,Your son was laughing while we were hitting him.
+20,25,-4 SNR,they kicked abel out of the garage,They kicked Abel out of the garage
+20,8,-4 SNR,me in,My mom was forever trying to rein me in.
+20,15,clear,i didn't get into trouble with my mom when it happened,I didn’t get into trouble with my mom when it happened
+20,16,-4 SNR,would be to,"I had a box of matches with me, too"
+20,18,-4 SNR,one of my uncle stopped,One of my uncles stopped calling me Trevor
+20,23,clear,he and my mom got into a huge fight,He and my mom got into a huge fight.
+20,1,-4 SNR,my...hours were gone,My eyebrows were gone
+20,9,+2 SNR,and i'll play with her son whenever we stayed there,And I’d play with her son whenever we stayed there
+20,20,clear,things catch fire sometimes,Things catch fire sometimes.
+20,6,+2 SNR,go to the bathroom and look at yourself,Go to the bathroom and look at yourself.
+20,12,clear,my mom was smart and had a sharp tounge,My mom was smart and had a sharp tongue
+20,2,+2 SNR,i loved fire and i especially loved fireworks,I loved fire and I especially loved fireworks
+20,26,clear,abel bascially lived with us from then on,Abel basically lived with us from then on.
+20,21,-4 SNR,why did i keep misbehaving,Why did I keep misbehaving?
+20,13,clear,when it came to disicpline catholic school was no jokee,"When it came to discipline, Catholic school was no joke"
+20,4,+2 SNR,i was hyperactive too,"I was hyperactive, too"
+21,23,-4 SNR,huge,He and my mom got into a huge fight.
+21,3,clear,they called me the rubbish bin of the family,They called me the rubbish bin of the family
+21,10,clear,why doesn't your mother buy it for you,Why doesn’t your mother buy it for you?
+21,18,clear,"one of my uncles stopped calling me trevor, he called...",One of my uncles stopped calling me Trevor
+21,6,clear,go to the bathroom and look at yourself,Go to the bathroom and look at yourself.
+21,8,+2 SNR,my mom was forever trying to reign me in,My mom was forever trying to rein me in.
+21,12,clear,"my mom was smart and had a sharp tongue, but i....",My mom was smart and had a sharp tongue
+21,1,-4 SNR,god,My eyebrows were gone
+21,27,clear,the therapist did give me a series of tests,The therapists did give me a series of tests
+21,2,+2 SNR,i loved fire and i especially loved firewings,I loved fire and I especially loved fireworks
+21,4,+2 SNR,i was hyperactive too,"I was hyperactive, too"
+21,13,clear,when it came to discipline catholic school was no joke,"When it came to discipline, Catholic school was no joke"
+21,7,-4 SNR,your son was laughing while we were eating...,Your son was laughing while we were hitting him.
+21,21,-4 SNR,keep being misbehaved,Why did I keep misbehaving?
+21,19,-4 SNR,the lawyer in him maintains his composure...,The lawyer in me maintains that I am completely innocent
+21,29,clear,a kid was bullying me,A kid was bullying me
+21,28,clear,because i could always find loopholes in the law,Because I could always find loopholes in the law
+21,17,-4 SNR,we took a break to go get a snack,At one point we took a break to go get a snack
+21,15,+2 SNR,i didn't get in trouble with my mom when it happened,I didn’t get into trouble with my mom when it happened
+21,22,+2 SNR,the white family came home and stood on the streets,The white family came home and stood on the street
+21,14,clear,in my mind i wasn't breaking the rules,"In my mind, I wasn’t breaking the rules"
+21,26,-4 SNR,able to do...,Abel basically lived with us from then on.
+21,25,+2 SNR,they kicked abel out of the garage,They kicked Abel out of the garage
+21,16,+2 SNR,i had a box of matches with me too,"I had a box of matches with me, too"
+21,11,+2 SNR,black people's dogs don't play fetch,Black people's dogs don't play fetch
+21,24,+2 SNR,that's why there is a fire brigadge,That’s why there’s a fire brigade
+21,20,-4 SNR,things catch fire sometimes,Things catch fire sometimes.
+21,9,-4 SNR,and i played with her son whenever we came over,And I’d play with her son whenever we stayed there
+21,5,-4 SNR,"two things i love the most about the world, fire and mud",The two things I loved most were fire and knives.
+21,30,+2 SNR,if only my mom held me like this,"Man, if only my mom hit me like this"
+22,27,-4 SNR,the therapist gave me a series of tests,The therapists did give me a series of tests
+22,11,+2 SNR,black people's dogs don't play fetch,Black people's dogs don't play fetch
+22,8,-4 SNR,my mom is,My mom was forever trying to rein me in.
+22,3,clear,they called me the rubbish bin of the family,They called me the rubbish bin of the family
+22,12,+2 SNR,my mom was smart and had a sharp tongue,My mom was smart and had a sharp tongue
+22,18,clear,one of my uncle's stopped calling me trevor,One of my uncles stopped calling me Trevor
+22,24,-4 SNR,that's why,That’s why there’s a fire brigade
+22,17,+2 SNR,at one point we took a break to get a snack,At one point we took a break to go get a snack
+22,10,-4 SNR,where has your mother,Why doesn’t your mother buy it for you?
+22,19,-4 SNR,maintains switzerland,The lawyer in me maintains that I am completely innocent
+22,26,+2 SNR,they would basically live with us from,Abel basically lived with us from then on.
+22,28,-4 SNR,cause i could always find people,Because I could always find loopholes in the law
+22,30,clear,if only my mom hit me like this,"Man, if only my mom hit me like this"
+22,6,clear,go to the bathroom and look at yourself,Go to the bathroom and look at yourself.
+22,25,-4 SNR,they kept,They kicked Abel out of the garage
+22,1,clear,my eyebrows were gone,My eyebrows were gone
+22,20,+2 SNR,things catch fire sometimes,Things catch fire sometimes.
+22,5,+2 SNR,the two things i loved most was fire and,The two things I loved most were fire and knives.
+22,9,clear,and i would play with her son whenever we stayed there,And I’d play with her son whenever we stayed there
+22,15,+2 SNR,i didn't get in trouble with my mom when it happened,I didn’t get into trouble with my mom when it happened
+22,4,+2 SNR,i was,"I was hyperactive, too"
+22,21,+2 SNR,why did i keep misbehaving,Why did I keep misbehaving?
+22,2,-4 SNR,i loved and i specially loved fire,I loved fire and I especially loved fireworks
+22,29,clear,the kid was bullying me,A kid was bullying me
+22,7,-4 SNR,your son was laughing while he was hitting me,Your son was laughing while we were hitting him.
+22,14,clear,in my mind i wasn't breaking the rules,"In my mind, I wasn’t breaking the rules"
+22,13,-4 SNR,when it came to,"When it came to discipline, Catholic school was no joke"
+22,22,clear,the white family came home and stood on the street,The white family came home and stood on the street
+22,23,+2 SNR,he and my mom got into a huge fight,He and my mom got into a huge fight.
+22,16,clear,i had a box of matches with me too,"I had a box of matches with me, too"
+23,9,clear,and i'd play with her son whenever we stayed there.,And I’d play with her son whenever we stayed there
+23,26,clear,abel basically lived with us from then on.,Abel basically lived with us from then on.
+23,17,-4 SNR,"at one point, we took a break to go get a snack.",At one point we took a break to go get a snack
+23,13,clear,"when it came to discipline, catholic school was no joke.","When it came to discipline, Catholic school was no joke"
+23,2,-4 SNR,"i loved fire, i especially loved fireworks.",I loved fire and I especially loved fireworks
+23,3,clear,they called me 'the rubbish bin of the family'.,They called me the rubbish bin of the family
+23,15,clear,i didn't get into trouble with my mum when it happened.,I didn’t get into trouble with my mom when it happened
+23,23,+2 SNR,he and my mom got into a huge fight.,He and my mom got into a huge fight.
+23,5,-4 SNR,"the two things i loved most, fire and mud.",The two things I loved most were fire and knives.
+23,11,+2 SNR,black people's dogs don't play fetch.,Black people's dogs don't play fetch
+23,27,+2 SNR,the therapists did give me a series of tests.,The therapists did give me a series of tests
+23,30,+2 SNR,if only my mum had seen this.,"Man, if only my mom hit me like this"
+23,19,-4 SNR,the lawyer maintains that ... exclusively,The lawyer in me maintains that I am completely innocent
+23,10,-4 SNR,why doesn't your mother buy it for youslash,Why doesn’t your mother buy it for you?
+23,8,-4 SNR,my mom was forever trying to rein me in,My mom was forever trying to rein me in.
+23,12,+2 SNR,"my mom was smart, and had a sharp tongue.",My mom was smart and had a sharp tongue
+23,6,clear,go to the bathroom and look at yourself.,Go to the bathroom and look at yourself.
+23,7,clear,your son was laughing while we were hitting him.,Your son was laughing while we were hitting him.
+23,29,-4 SNR,the kid was bullying me,A kid was bullying me
+23,4,clear,i was hyper active too.,"I was hyperactive, too"
+23,14,-4 SNR,in my mind i was a great genius,"In my mind, I wasn’t breaking the rules"
+23,16,clear,i had a box of matches with me too,"I had a box of matches with me, too"
+23,21,+2 SNR,why did i keep misbehaving,Why did I keep misbehaving?
+23,18,+2 SNR,one of my uncles stopped caling me 'trevor'.,One of my uncles stopped calling me Trevor
+23,1,clear,my eyebrows were gone,My eyebrows were gone
+23,22,-4 SNR,"the white family came home, and stood on the street.",The white family came home and stood on the street
+23,25,+2 SNR,they kciked abel out of the garage,They kicked Abel out of the garage
+23,28,-4 SNR,NA,Because I could always find loopholes in the law
+23,24,+2 SNR,that's why there's a fire brigade,That’s why there’s a fire brigade
+23,20,+2 SNR,things catch fire sometimes,Things catch fire sometimes.
+24,24,clear,that's why there's a fire brigade.,That’s why there’s a fire brigade
+24,11,clear,black people's dogs don't play fetch.,Black people's dogs don't play fetch
+24,14,+2 SNR,in my mind i wasn't breaking the rules.,"In my mind, I wasn’t breaking the rules"
+24,4,clear,i was hyperactive too,"I was hyperactive, too"
+24,1,-4 SNR,my eyebrows were gone.,My eyebrows were gone
+24,26,clear,abel basically lived with us from then on.,Abel basically lived with us from then on.
+24,16,-4 SNR,box too,"I had a box of matches with me, too"
+24,5,+2 SNR,the two things i loved most were fire and,The two things I loved most were fire and knives.
+24,6,-4 SNR,go to the bathroom and look at yourself,Go to the bathroom and look at yourself.
+24,30,+2 SNR,if only my mom had heard this,"Man, if only my mom hit me like this"
+24,8,+2 SNR,my mom was forever trying to reign me in,My mom was forever trying to rein me in.
+24,29,clear,a kid was bullying me,A kid was bullying me
+24,23,+2 SNR,he and my mom had gotten into a huge fight.,He and my mom got into a huge fight.
+24,21,+2 SNR,why did i keep misbehavingslash,Why did I keep misbehaving?
+24,10,clear,NA,Why doesn’t your mother buy it for you?
+24,28,+2 SNR,NA,Because I could always find loopholes in the law
+24,12,+2 SNR,my mom was smart and had a sharp tongue,My mom was smart and had a sharp tongue
+24,18,clear,one of my uncles stopped calling me trevor,One of my uncles stopped calling me Trevor
+24,19,clear,the lawyer in me maintains that i am completely innocent,The lawyer in me maintains that I am completely innocent
+24,17,-4 SNR,at one point we took a break to go get a snack,At one point we took a break to go get a snack
+24,27,clear,the therapist did give me a series of tests,The therapists did give me a series of tests
+24,7,-4 SNR,well your son was laughing while we were,Your son was laughing while we were hitting him.
+24,2,-4 SNR,i especially loved fireworks,I loved fire and I especially loved fireworks
+24,20,+2 SNR,things catch fire sometimes,Things catch fire sometimes.
+24,13,-4 SNR,when it came to catholic schools,"When it came to discipline, Catholic school was no joke"
+24,3,clear,they called me the rubbish bin of the family,They called me the rubbish bin of the family
+24,15,-4 SNR,i would get into trouble my mum,I didn’t get into trouble with my mom when it happened
+24,22,-4 SNR,white family came home and stood on the streets,The white family came home and stood on the street
+24,9,+2 SNR,and i played with her son whenever we stayed there,And I’d play with her son whenever we stayed there
+24,25,-4 SNR,they kicked abel out of the garage,They kicked Abel out of the garage
+25,29,clear,a kid was bullying me,A kid was bullying me
+25,28,-4 SNR,i can always find,Because I could always find loopholes in the law
+25,19,-4 SNR,maintains,The lawyer in me maintains that I am completely innocent
+25,17,+2 SNR,"at one point, we took a break to go get a snack",At one point we took a break to go get a snack
+25,11,clear,black people's dogs dont play fetch,Black people's dogs don't play fetch
+25,1,-4 SNR,hours,My eyebrows were gone
+25,4,+2 SNR,i was hyperactive too,"I was hyperactive, too"
+25,18,+2 SNR,one of my uncles stopped calling me trevor,One of my uncles stopped calling me Trevor
+25,24,-4 SNR,there's a fire,That’s why there’s a fire brigade
+25,23,clear,he and my mom got into a huge fight,He and my mom got into a huge fight.
+25,25,-4 SNR,they kicked abel out of the garage,They kicked Abel out of the garage
+25,16,+2 SNR,i had a box of matches with me too,"I had a box of matches with me, too"
+25,12,-4 SNR,smart and i,My mom was smart and had a sharp tongue
+25,6,clear,go to the bathroom and look at yourself,Go to the bathroom and look at yourself.
+25,20,-4 SNR,things catch fire,Things catch fire sometimes.
+25,9,+2 SNR,and i'd play with her son whenever we'd stay there,And I’d play with her son whenever we stayed there
+25,26,-4 SNR,NA,Abel basically lived with us from then on.
+25,5,-4 SNR,two things i loved the most fire and,The two things I loved most were fire and knives.
+25,21,-4 SNR,keep mishebaving,Why did I keep misbehaving?
+25,30,+2 SNR,if only my mom could this,"Man, if only my mom hit me like this"
+25,8,+2 SNR,my mom was forever trynna rain me in,My mom was forever trying to rein me in.
+25,14,clear,in my mind i wasnt breaking the rules,"In my mind, I wasn’t breaking the rules"
+25,3,+2 SNR,they called me the rubbish of the family,They called me the rubbish bin of the family
+25,27,clear,the therapists did give me a series of tests,The therapists did give me a series of tests
+25,15,clear,i didnt get into trouble with my mom when it happened,I didn’t get into trouble with my mom when it happened
+25,7,+2 SNR,son was laughing while we were hitting him,Your son was laughing while we were hitting him.
+25,2,clear,i loved fire and i especially loved fireworks,I loved fire and I especially loved fireworks
+25,10,clear,why doesnt your mother buy it for you,Why doesn’t your mother buy it for you?
+25,22,+2 SNR,the white family came home and stood on the streets,The white family came home and stood on the street
+25,13,clear,"when it came to discipline, catholic school was no joke","When it came to discipline, Catholic school was no joke"
+26,17,+2 SNR,at one point we took a break to go get a snack,At one point we took a break to go get a snack
+26,5,clear,the two things i love most were fire and ice,The two things I loved most were fire and knives.
+26,2,+2 SNR,i love fire and i especially loved fireworks,I loved fire and I especially loved fireworks
+26,26,clear,abel basically lived with us from then on,Abel basically lived with us from then on.
+26,16,clear,i had a box of matches with me too,"I had a box of matches with me, too"
+26,14,-4 SNR,mama,"In my mind, I wasn’t breaking the rules"
+26,15,+2 SNR,i didn't get into trouble with my mom when it happened,I didn’t get into trouble with my mom when it happened
+26,30,clear,if only my mom hit me like this,"Man, if only my mom hit me like this"
+26,28,-4 SNR,it's like i can always find,Because I could always find loopholes in the law
+26,4,+2 SNR,i was hyperactive too,"I was hyperactive, too"
+26,9,+2 SNR,and i played with her son whenever we stayed there,And I’d play with her son whenever we stayed there
+26,13,-4 SNR,when it came to discreet,"When it came to discipline, Catholic school was no joke"
+26,3,+2 SNR,they called me the rubbish bin of the family,They called me the rubbish bin of the family
+26,23,clear,here my mom got into a huge fight,He and my mom got into a huge fight.
+26,29,clear,the kid was bullying me,A kid was bullying me
+26,27,clear,the therapists did give me a series of tests,The therapists did give me a series of tests
+26,25,-4 SNR,they left the garage,They kicked Abel out of the garage
+26,7,-4 SNR,the son was laughing while hitting,Your son was laughing while we were hitting him.
+26,10,+2 SNR,why doesn't your mother buy it for you,Why doesn’t your mother buy it for you?
+26,6,-4 SNR,go to the bathroom and look at yourself,Go to the bathroom and look at yourself.
+26,11,-4 SNR,blackbean was dodged,Black people's dogs don't play fetch
+26,19,+2 SNR,the lawyer maintains i'm completely innocent,The lawyer in me maintains that I am completely innocent
+26,24,-4 SNR,that's why there's a fire,That’s why there’s a fire brigade
+26,8,clear,my mom was forever trying to reign me in,My mom was forever trying to rein me in.
+26,1,-4 SNR,my eyebrows,My eyebrows were gone
+26,22,+2 SNR,the white family came home and stood on the street,The white family came home and stood on the street
+26,21,clear,why did i keep misbehaving,Why did I keep misbehaving?
+26,18,clear,one of my uncles stopped calling me trevor,One of my uncles stopped calling me Trevor
+26,12,-4 SNR,i was shocked,My mom was smart and had a sharp tongue
+26,20,+2 SNR,things catch fire sometimes,Things catch fire sometimes.
+27,17,+2 SNR,at one point we took a break to get a snack,At one point we took a break to go get a snack
+27,10,-4 SNR,why doesnt your mother buy it for me,Why doesn’t your mother buy it for you?
+27,9,clear,and i played with her son whenever we stayed there,And I’d play with her son whenever we stayed there
+27,14,-4 SNR,in my mind i wasn't breaking the rules,"In my mind, I wasn’t breaking the rules"
+27,23,-4 SNR,he and my mom got into a huge fight,He and my mom got into a huge fight.
+27,13,clear,"when it came to discipline, catholic school was no joke","When it came to discipline, Catholic school was no joke"
+27,1,-4 SNR,my eyebrows were gone,My eyebrows were gone
+27,7,+2 SNR,son was laughing while i was hitting him,Your son was laughing while we were hitting him.
+27,4,+2 SNR,i was hyperactive too,"I was hyperactive, too"
+27,3,clear,they called me the rubbish bin of the family,They called me the rubbish bin of the family
+27,18,+2 SNR,one of my uncles stopped calling me trevor,One of my uncles stopped calling me Trevor
+27,30,-4 SNR,if only my mon,"Man, if only my mom hit me like this"
+27,15,+2 SNR,i didn't get into trouble with my mom when it happened,I didn’t get into trouble with my mom when it happened
+27,11,clear,black people's dogs don't play fetch,Black people's dogs don't play fetch
+27,12,+2 SNR,my mom was sharp and had a,My mom was smart and had a sharp tongue
+27,2,+2 SNR,i loved fired and i especially loved fireworks,I loved fire and I especially loved fireworks
+27,21,-4 SNR,why did they...misbehaving,Why did I keep misbehaving?
+27,20,-4 SNR,things catch fire sometimes,Things catch fire sometimes.
+27,24,clear,that's why there's a fire bregade,That’s why there’s a fire brigade
+27,22,-4 SNR,..family came home and stood on the street,The white family came home and stood on the street
+27,5,clear,the two things i loved most were fire and knives,The two things I loved most were fire and knives.
+27,19,clear,the lawyer maintains that i am completely innocent,The lawyer in me maintains that I am completely innocent
+27,27,+2 SNR,the therapist did give me a series of tests,The therapists did give me a series of tests
+27,26,clear,able basically lived with us from then on,Abel basically lived with us from then on.
+27,6,clear,go to the bathroom and look at yourself,Go to the bathroom and look at yourself.
+27,29,-4 SNR,the kid was bullying,A kid was bullying me
+27,8,-4 SNR,my mom was forever trying to reign me in,My mom was forever trying to rein me in.
+27,28,+2 SNR,cause i could always find loopholes in the law,Because I could always find loopholes in the law
+27,16,+2 SNR,i had a box of matches with me too,"I had a box of matches with me, too"
+27,25,clear,they kicked able out of the garage,They kicked Abel out of the garage
+28,13,clear,"when it came to discipline, catholic school was no joke","When it came to discipline, Catholic school was no joke"
+28,18,-4 SNR,one of my uncles stopped pouring for,One of my uncles stopped calling me Trevor
+28,11,-4 SNR,black peoples dogs dont play fetch,Black people's dogs don't play fetch
+28,9,-4 SNR,whenever we stayed over,And I’d play with her son whenever we stayed there
+28,19,-4 SNR,the lawyer in me maintains that im completely,The lawyer in me maintains that I am completely innocent
+28,20,+2 SNR,things catch fire sometimes,Things catch fire sometimes.
+28,24,+2 SNR,thats why theres a fire brigade,That’s why there’s a fire brigade
+28,8,+2 SNR,my mom was forever trying to reign me in,My mom was forever trying to rein me in.
+28,23,clear,he and my mom got into a huge figt,He and my mom got into a huge fight.
+28,15,+2 SNR,i didnt get into trouble with my mom when it happened,I didn’t get into trouble with my mom when it happened
+28,6,+2 SNR,go to the bathroom and look at yourself,Go to the bathroom and look at yourself.
+28,2,clear,i loved fire and i especially loved fireworks,I loved fire and I especially loved fireworks
+28,5,clear,the two things i loved most were fire and knives,The two things I loved most were fire and knives.
+28,3,-4 SNR,they called me rubbish beneath the,They called me the rubbish bin of the family
+28,17,-4 SNR,at one point we took a break to go get a snack,At one point we took a break to go get a snack
+28,22,-4 SNR,a white family came home and,The white family came home and stood on the street
+28,28,+2 SNR,cause i could always find loopholes in the rule,Because I could always find loopholes in the law
+28,21,-4 SNR,why was he misbehaving,Why did I keep misbehaving?
+28,14,+2 SNR,in my mind i wasn't breaking the rules,"In my mind, I wasn’t breaking the rules"
+28,16,+2 SNR,i had a box of matches with me too,"I had a box of matches with me, too"
+28,27,clear,the therapist did give me a series of tests,The therapists did give me a series of tests
+28,12,clear,my mom was smart and had a sharp tongue but,My mom was smart and had a sharp tongue
+28,26,clear,abel basically lived with us from then on,Abel basically lived with us from then on.
+28,1,clear,my eyebrows were gone,My eyebrows were gone
+28,29,clear,the kid was bullying me,A kid was bullying me
+28,4,-4 SNR,i was bagged or,"I was hyperactive, too"
+28,10,+2 SNR,why doesn't your mother buy it for you,Why doesn’t your mother buy it for you?
+28,7,-4 SNR,your son was laughing while we were eating,Your son was laughing while we were hitting him.
+28,30,+2 SNR,if only my mum had seen this,"Man, if only my mom hit me like this"
+28,25,clear,they kicked abel out of the garage,They kicked Abel out of the garage
+29,26,-4 SNR,NA,Abel basically lived with us from then on.
+29,20,+2 SNR,things catch fire sometimes,Things catch fire sometimes.
+29,22,clear,the white family came home and stood on the streets,The white family came home and stood on the street
+29,2,-4 SNR,especially loved,I loved fire and I especially loved fireworks
+29,25,+2 SNR,they kicked able out of the garage,They kicked Abel out of the garage
+29,19,+2 SNR,the laywer maintains that im completely innocent,The lawyer in me maintains that I am completely innocent
+29,9,+2 SNR,and i played with her son whenever we stayed there,And I’d play with her son whenever we stayed there
+29,27,+2 SNR,the therapists did give me a series of tests,The therapists did give me a series of tests
+29,15,+2 SNR,i didnt get into trouble with my mom when it happened,I didn’t get into trouble with my mom when it happened
+29,13,-4 SNR,when it came to,"When it came to discipline, Catholic school was no joke"
+29,1,clear,my eyebrows were gone,My eyebrows were gone
+29,4,-4 SNR,i was,"I was hyperactive, too"
+29,17,clear,at one point we took a break to get a snack,At one point we took a break to go get a snack
+29,10,-4 SNR,why doesnt your mother buy it for you,Why doesn’t your mother buy it for you?
+29,14,clear,in my mind i wasnt breaking the rules,"In my mind, I wasn’t breaking the rules"
+29,3,-4 SNR,they called me the rubbish bin,They called me the rubbish bin of the family
+29,24,-4 SNR,thats why there is a,That’s why there’s a fire brigade
+29,21,clear,why did i keep misbehaving,Why did I keep misbehaving?
+29,30,+2 SNR,if only my mom were with us,"Man, if only my mom hit me like this"
+29,23,clear,he and my mom got into a huge fight,He and my mom got into a huge fight.
+29,8,clear,my mom was forever trying to reign me in,My mom was forever trying to rein me in.
+29,29,+2 SNR,the kid was bullying me,A kid was bullying me
+29,12,-4 SNR,and a sharp tounge,My mom was smart and had a sharp tongue
+29,7,-4 SNR,your son as laughing well,Your son was laughing while we were hitting him.
+29,5,+2 SNR,the two things i loved most were fire and,The two things I loved most were fire and knives.
+29,16,+2 SNR,i had a box of matches with me too,"I had a box of matches with me, too"
+29,28,clear,cus i could always find loopholes in the law,Because I could always find loopholes in the law
+29,18,-4 SNR,one of my uncles stopped calling,One of my uncles stopped calling me Trevor
+29,11,clear,black peoples dogs don't play fetch,Black people's dogs don't play fetch
+29,6,clear,go to the bathroom and look at yourself,Go to the bathroom and look at yourself.
+30,30,clear,if only my mom hit me like this,"Man, if only my mom hit me like this"
+30,2,+2 SNR,i loved fire and i especially loved fireworks,I loved fire and I especially loved fireworks
+30,16,-4 SNR,i brought some matches with me too,"I had a box of matches with me, too"
+30,10,clear,why doesn't your mother buy it for you,Why doesn’t your mother buy it for you?
+30,14,clear,in my mind i wasn't breaking the rules,"In my mind, I wasn’t breaking the rules"
+30,6,-4 SNR,got to the bunk and look at yourself,Go to the bathroom and look at yourself.
+30,19,-4 SNR,maintains,The lawyer in me maintains that I am completely innocent
+30,21,+2 SNR,why did i keep misbehaving,Why did I keep misbehaving?
+30,8,clear,my mom was forever trying to rein me in,My mom was forever trying to rein me in.
+30,5,+2 SNR,the two things i loved most were fires and minds,The two things I loved most were fire and knives.
+30,22,-4 SNR,my family came home and stood in the street,The white family came home and stood on the street
+30,1,+2 SNR,my eyebrows were gone,My eyebrows were gone
+30,11,+2 SNR,black people's dogs don't play fetch,Black people's dogs don't play fetch
+30,17,clear,at one point we took a break to go get a snack,At one point we took a break to go get a snack
+30,9,+2 SNR,and i'd play with her son whenever we stayed there,And I’d play with her son whenever we stayed there
+30,20,+2 SNR,things catch fire sometimes,Things catch fire sometimes.
+30,26,+2 SNR,abel basically lived with us from then on,Abel basically lived with us from then on.
+30,7,clear,your son was laughing while we were hitting him,Your son was laughing while we were hitting him.
+30,12,+2 SNR,my mom was sharp and had a sharp tounge,My mom was smart and had a sharp tongue
+30,4,clear,i was hyperactive too,"I was hyperactive, too"
+30,13,-4 SNR,when it came to i kept,"When it came to discipline, Catholic school was no joke"
+30,25,-4 SNR,they kicked abel out of the garage,They kicked Abel out of the garage
+30,28,-4 SNR,cause i could always find,Because I could always find loopholes in the law
+30,29,+2 SNR,the kid was bullying,A kid was bullying me
+30,24,clear,that's why there's a fire brigade,That’s why there’s a fire brigade
+30,15,-4 SNR,i could get into trouble with my mom,I didn’t get into trouble with my mom when it happened
+30,3,clear,they called me the rubbish bin of the family,They called me the rubbish bin of the family
+30,18,clear,one of my uncles stopped calling me trevor he called me,One of my uncles stopped calling me Trevor
+30,23,-4 SNR,he and my mom got into a huge fight,He and my mom got into a huge fight.
+30,27,-4 SNR,the therapist did give me a series of tests,The therapists did give me a series of tests
+31,2,-4 SNR,especially loved fireworks,I loved fire and I especially loved fireworks
+31,5,+2 SNR,the two things i love most were fire and ants,The two things I loved most were fire and knives.
+31,28,-4 SNR,i could always find loopholes,Because I could always find loopholes in the law
+31,4,-4 SNR,to,"I was hyperactive, too"
+31,10,+2 SNR,why doesnt your mother buy it for you,Why doesn’t your mother buy it for you?
+31,22,+2 SNR,the white family came home and stood on the street,The white family came home and stood on the street
+31,30,-4 SNR,my mom,"Man, if only my mom hit me like this"
+31,6,-4 SNR,go to the bathroom and look at yourself,Go to the bathroom and look at yourself.
+31,17,+2 SNR,at one point we took a break to go get a snack,At one point we took a break to go get a snack
+31,20,-4 SNR,things catch up,Things catch fire sometimes.
+31,1,-4 SNR,hours,My eyebrows were gone
+31,16,clear,i had a box of matches with me too,"I had a box of matches with me, too"
+31,21,+2 SNR,why did i keep misbehaving,Why did I keep misbehaving?
+31,15,clear,i didnt get in trouble with my mom when it happened,I didn’t get into trouble with my mom when it happened
+31,7,-4 SNR,you son was laughin while they were hitting him,Your son was laughing while we were hitting him.
+31,13,+2 SNR,"when it came to discipline, catholic school was no joke","When it came to discipline, Catholic school was no joke"
+31,24,clear,thats why there was a fire brigade,That’s why there’s a fire brigade
+31,18,+2 SNR,one of my uncles stopped calling me trevor,One of my uncles stopped calling me Trevor
+31,19,clear,the lawyer in me maintains that i am completely innocent,The lawyer in me maintains that I am completely innocent
+31,26,clear,abel basically lived with us from then on,Abel basically lived with us from then on.
+31,12,-4 SNR,my mom was smart,My mom was smart and had a sharp tongue
+31,9,clear,and id play with her son whenever we stayed there,And I’d play with her son whenever we stayed there
+31,14,clear,in my mind i wasnt breaking the rules,"In my mind, I wasn’t breaking the rules"
+31,11,clear,black peoples dogs dont play fetch,Black people's dogs don't play fetch
+31,23,clear,he and my mom got into a huge fight,He and my mom got into a huge fight.
+31,29,+2 SNR,the kid was bullying me,A kid was bullying me
+31,8,+2 SNR,my mom was forever trying to reign me in,My mom was forever trying to rein me in.
+31,27,+2 SNR,the therapists did give me a series of tests,The therapists did give me a series of tests
+31,25,-4 SNR,they kicked abel out of the garage,They kicked Abel out of the garage
+31,3,clear,they called me the rubbish bin of the family,They called me the rubbish bin of the family
+32,3,+2 SNR,they called me the rubbish bin of the family,They called me the rubbish bin of the family
+32,21,clear,why did i keep misbehaving,Why did I keep misbehaving?
+32,23,+2 SNR,he and my mom got into a huge fight,He and my mom got into a huge fight.
+32,7,+2 SNR,your son was laughing while we were hitting him,Your son was laughing while we were hitting him.
+32,15,clear,i didnt get into trouble with my mom when it happened,I didn’t get into trouble with my mom when it happened
+32,26,clear,abel basically lived with us from then on,Abel basically lived with us from then on.
+32,19,-4 SNR,the lawyer mantains basically,The lawyer in me maintains that I am completely innocent
+32,27,+2 SNR,the therapists did give me a series of tests,The therapists did give me a series of tests
+32,24,-4 SNR,thats why theres a fire market,That’s why there’s a fire brigade
+32,29,clear,a kid was bullying me,A kid was bullying me
+32,2,-4 SNR,i loved i especially loved fireworks,I loved fire and I especially loved fireworks
+32,20,clear,things catch fire sometimes,Things catch fire sometimes.
+32,11,clear,black peoples dogs dont play fetch,Black people's dogs don't play fetch
+32,1,-4 SNR,my paper hours were gone,My eyebrows were gone
+32,4,-4 SNR,i was half bagged for two,"I was hyperactive, too"
+32,5,+2 SNR,the two things i loved most were fire and mud,The two things I loved most were fire and knives.
+32,12,clear,my mom was sharp and had a smart tongue,My mom was smart and had a sharp tongue
+32,28,clear,cause i could always fine loop holes in the law,Because I could always find loopholes in the law
+32,18,-4 SNR,one of my uncles stopped calling me trevor,One of my uncles stopped calling me Trevor
+32,22,+2 SNR,the white family came home and stood on the street,The white family came home and stood on the street
+32,6,+2 SNR,go to the bathroom and look at yourself,Go to the bathroom and look at yourself.
+32,17,-4 SNR,at one point we took a break to go get a snack,At one point we took a break to go get a snack
+32,8,clear,my mom was forever trying to reign me in,My mom was forever trying to rein me in.
+32,14,-4 SNR,in my mind i wasnt breaking the rules,"In my mind, I wasn’t breaking the rules"
+32,13,clear,when it came to discipline catholic school was no joke,"When it came to discipline, Catholic school was no joke"
+32,16,+2 SNR,i had a box of matches with me too,"I had a box of matches with me, too"
+32,10,-4 SNR,why doesnt your mother for you,Why doesn’t your mother buy it for you?
+32,9,+2 SNR,and id play with her son whenever we stayed there,And I’d play with her son whenever we stayed there
+32,25,+2 SNR,they kicked abel out of the garage,They kicked Abel out of the garage
+32,30,-4 SNR,if only my mom had known this,"Man, if only my mom hit me like this"
+33,23,-4 SNR,huge fight mom,He and my mom got into a huge fight.
+33,5,+2 SNR,the two things i loved most were fire and might,The two things I loved most were fire and knives.
+33,3,clear,they called me the rubbish bin  of the family,They called me the rubbish bin of the family
+33,12,+2 SNR,my mum was smart and had a sharp tongue,My mom was smart and had a sharp tongue
+33,13,-4 SNR,when it came to catgolic schools were a major,"When it came to discipline, Catholic school was no joke"
+33,18,+2 SNR,one of my uncles stoped calling me trevor,One of my uncles stopped calling me Trevor
+33,11,-4 SNR,black peoples dogs don't play fish,Black people's dogs don't play fetch
+33,7,-4 SNR,oi your son was laughing while we were eating myrrh,Your son was laughing while we were hitting him.
+33,22,clear,the white family came home and stood on the streets,The white family came home and stood on the street
+33,1,+2 SNR,my eyebrows were gone,My eyebrows were gone
+33,24,clear,that's why there's a fire brigade,That’s why there’s a fire brigade
+33,17,-4 SNR,at one point they took a break to go get a snack,At one point we took a break to go get a snack
+33,10,clear,why doesn't your mother by it for you,Why doesn’t your mother buy it for you?
+33,9,-4 SNR,son whenever we stayed,And I’d play with her son whenever we stayed there
+33,26,clear,abel basically lived wth us from then on,Abel basically lived with us from then on.
+33,19,clear,the lawyer in me maintains that i am completely innocent,The lawyer in me maintains that I am completely innocent
+33,14,+2 SNR,in my mind i wasn't breaking the rules,"In my mind, I wasn’t breaking the rules"
+33,2,clear,i loved fire and i especially loved fireworks,I loved fire and I especially loved fireworks
+33,27,-4 SNR,the son did give me a series of tests,The therapists did give me a series of tests
+33,6,+2 SNR,go to the bathroom and look at yourself,Go to the bathroom and look at yourself.
+33,30,+2 SNR,if only my mum had made me breakfast,"Man, if only my mom hit me like this"
+33,20,-4 SNR,things catch fire with adversity,Things catch fire sometimes.
+33,4,+2 SNR,i was hyperactive too,"I was hyperactive, too"
+33,15,+2 SNR,i didn't get into trouble with my mum when it happened,I didn’t get into trouble with my mom when it happened
+33,16,-4 SNR,i had a box of matches with me too,"I had a box of matches with me, too"
+33,8,-4 SNR,i'm almost trying to rain me in,My mom was forever trying to rein me in.
+33,25,clear,they kicked abel out of the garage,They kicked Abel out of the garage
+33,29,+2 SNR,the kid was bullying me,A kid was bullying me
+33,21,clear,why did i keep misbehaving,Why did I keep misbehaving?
+33,28,clear,cause i could always find loopholes in the law,Because I could always find loopholes in the law
+34,10,clear,why doesnt your mother buy it for you,Why doesn’t your mother buy it for you?
+34,18,-4 SNR,one of my uncles stopped calling me trevor,One of my uncles stopped calling me Trevor
+34,17,-4 SNR,at one point we took a break to go get a snack,At one point we took a break to go get a snack
+34,4,+2 SNR,i was hyperactive too,"I was hyperactive, too"
+34,5,clear,the two things i loved most were fire and knives,The two things I loved most were fire and knives.
+34,21,clear,why did i keep misbehaving,Why did I keep misbehaving?
+34,30,+2 SNR,if only my mom had known this,"Man, if only my mom hit me like this"
+34,19,clear,the lawyer in me remains that i am completly innocent,The lawyer in me maintains that I am completely innocent
+34,22,+2 SNR,the white family came home and stood on the street,The white family came home and stood on the street
+34,7,+2 SNR,your son was laughing while we were hitting him,Your son was laughing while we were hitting him.
+34,11,clear,black peoples dogs dont play fetch,Black people's dogs don't play fetch
+34,8,+2 SNR,my mom was forever trying to rein me in,My mom was forever trying to rein me in.
+34,2,clear,i loved fire and i especially loved fireworks,I loved fire and I especially loved fireworks
+34,15,-4 SNR,i can get into trouble when my mom was there,I didn’t get into trouble with my mom when it happened
+34,13,clear,when it came to disapline catholic school was no joke,"When it came to discipline, Catholic school was no joke"
+34,27,clear,the therapists did give me a series of tests,The therapists did give me a series of tests
+34,16,+2 SNR,i had a box of matches with me too,"I had a box of matches with me, too"
+34,14,+2 SNR,in my mind i wasnt breaking the rules,"In my mind, I wasn’t breaking the rules"
+34,20,-4 SNR,things catch fire sometimes,Things catch fire sometimes.
+34,23,+2 SNR,he and my mom got into a huge fight,He and my mom got into a huge fight.
+34,28,clear,cause i could always find loopholes in the law,Because I could always find loopholes in the law
+34,24,-4 SNR,thats why theres a fire hyrdant,That’s why there’s a fire brigade
+34,9,+2 SNR,and id play with her son whenever wed stay there,And I’d play with her son whenever we stayed there
+34,1,-4 SNR,my eyebrows were gone,My eyebrows were gone
+34,6,-4 SNR,go to the bathroom and look at yourself,Go to the bathroom and look at yourself.
+34,29,+2 SNR,the kid was bullying me,A kid was bullying me
+34,25,-4 SNR,they kicked abel out of the garage,They kicked Abel out of the garage
+34,3,-4 SNR,they called me rubbish man the seventh,They called me the rubbish bin of the family
+34,26,clear,abel basically lived with us from then on,Abel basically lived with us from then on.
+34,12,-4 SNR,im on shot,My mom was smart and had a sharp tongue
+35,15,+2 SNR,i didnt get into trouble with my mom when it happened.,I didn’t get into trouble with my mom when it happened
+35,29,+2 SNR,the kid was bullying,A kid was bullying me
+35,24,-4 SNR,thats why theres a fire,That’s why there’s a fire brigade
+35,19,-4 SNR,the lawyer in me maintains that i completely,The lawyer in me maintains that I am completely innocent
+35,2,clear,"i loved fire, and i especially loved fireworks.",I loved fire and I especially loved fireworks
+35,28,+2 SNR,cause i could always find loopholes in the,Because I could always find loopholes in the law
+35,17,+2 SNR,at one point we took a break to go get a snack,At one point we took a break to go get a snack
+35,1,+2 SNR,my eyebrows were gone,My eyebrows were gone
+35,27,+2 SNR,the therapist did give me a series of tests.,The therapists did give me a series of tests
+35,23,-4 SNR,me and my mom got into a huge fight,He and my mom got into a huge fight.
+35,30,-4 SNR,if only my mom,"Man, if only my mom hit me like this"
+35,14,clear,in my mind i wasnt breaking the rules,"In my mind, I wasn’t breaking the rules"
+35,20,clear,things catch fire sometimes,Things catch fire sometimes.
+35,7,clear,your son was laughing while we were hitting him,Your son was laughing while we were hitting him.
+35,21,clear,why did i keep misbehavingslash,Why did I keep misbehaving?
+35,5,+2 SNR,the two things i loved most were fire and math,The two things I loved most were fire and knives.
+35,4,+2 SNR,i was hyperactive too,"I was hyperactive, too"
+35,10,+2 SNR,why doesnt your mother buy it for you,Why doesn’t your mother buy it for you?
+35,12,-4 SNR,my mom was smart and it shocked her,My mom was smart and had a sharp tongue
+35,6,clear,go to the bathroom and look at yourself,Go to the bathroom and look at yourself.
+35,25,-4 SNR,they kept out of the garage,They kicked Abel out of the garage
+35,16,+2 SNR,i had a box of matches with it too,"I had a box of matches with me, too"
+35,9,-4 SNR,and clear never restate,And I’d play with her son whenever we stayed there
+35,13,-4 SNR,when it came to catholic schools never,"When it came to discipline, Catholic school was no joke"
+35,3,-4 SNR,they called me,They called me the rubbish bin of the family
+35,22,-4 SNR,"if a white family came home, its",The white family came home and stood on the street
+35,26,clear,abel basically lived with us from then on,Abel basically lived with us from then on.
+35,11,clear,black peoples dogs dont play fetch,Black people's dogs don't play fetch
+35,18,clear,one of my uncles stopped calling me trevor. he called,One of my uncles stopped calling me Trevor
+35,8,clear,my mom was forever trying to reign me in,My mom was forever trying to rein me in.
+36,11,+2 SNR,black people's dog don't play fetch.,Black people's dogs don't play fetch
+36,1,-4 SNR,gone,My eyebrows were gone
+36,2,clear,"i loved fire, and i especially lvoed fireworks",I loved fire and I especially loved fireworks
+36,20,+2 SNR,things catch fire sometimes,Things catch fire sometimes.
+36,18,clear,one of my uncles stopped calling me trevor,One of my uncles stopped calling me Trevor
+36,26,clear,abel basically lived with us from then on,Abel basically lived with us from then on.
+36,28,clear,cause i could always find loopholes in the law,Because I could always find loopholes in the law
+36,19,-4 SNR,maintains the,The lawyer in me maintains that I am completely innocent
+36,6,clear,go to the bathroom and look at yourself,Go to the bathroom and look at yourself.
+36,5,+2 SNR,the two things i loved most were fire and mugs,The two things I loved most were fire and knives.
+36,7,-4 SNR,son was blasting while we were eating,Your son was laughing while we were hitting him.
+36,17,+2 SNR,"at one point, we took a break to go get a snack",At one point we took a break to go get a snack
+36,8,clear,my mom was forever trying to rein me in,My mom was forever trying to rein me in.
+36,4,clear,i was hyperactive too,"I was hyperactive, too"
+36,12,+2 SNR,my mom was smart and had a sharp tongue,My mom was smart and had a sharp tongue
+36,21,-4 SNR,why did they keep us here,Why did I keep misbehaving?
+36,9,+2 SNR,and i play with her son whenever i stay there,And I’d play with her son whenever we stayed there
+36,22,clear,the white family came home and stood on the street,The white family came home and stood on the street
+36,24,+2 SNR,that's why there's a fire brigade,That’s why there’s a fire brigade
+36,16,-4 SNR,a box of matches with me too,"I had a box of matches with me, too"
+36,27,-4 SNR,give me a series of tests,The therapists did give me a series of tests
+36,3,+2 SNR,they called me the 'rubbish bin' of the family,They called me the rubbish bin of the family
+36,30,+2 SNR,if only my mom could've blank this,"Man, if only my mom hit me like this"
+36,10,-4 SNR,where doesn't your mother....,Why doesn’t your mother buy it for you?
+36,15,-4 SNR,i could get into trouble when my mom....,I didn’t get into trouble with my mom when it happened
+36,23,-4 SNR,me and my mom got into a huge fight,He and my mom got into a huge fight.
+36,14,+2 SNR,"in my mind, i wasn't breaking the rules","In my mind, I wasn’t breaking the rules"
+36,25,clear,they kicked abel out of the garage,They kicked Abel out of the garage
+36,29,clear,a kid was bullying me,A kid was bullying me
+36,13,-4 SNR,"when it came to discipline, catholic schools were....","When it came to discipline, Catholic school was no joke"
+37,13,+2 SNR,when it came to discipline catholic school was no joke,"When it came to discipline, Catholic school was no joke"
+37,29,+2 SNR,the kid was bullied,A kid was bullying me
+37,22,-4 SNR,my family came home and stood on the street,The white family came home and stood on the street
+37,26,clear,abel basically lived with us from then on,Abel basically lived with us from then on.
+37,5,-4 SNR,two things i loved most fire and light,The two things I loved most were fire and knives.
+37,17,+2 SNR,at one point we took a break to go get a snack,At one point we took a break to go get a snack
+37,9,+2 SNR,i played with her son whenever we stayed there,And I’d play with her son whenever we stayed there
+37,7,+2 SNR,your son was laughing while we were hitting him,Your son was laughing while we were hitting him.
+37,8,clear,my mom was forever trying to rein me in,My mom was forever trying to rein me in.
+37,23,+2 SNR,he and my mom got into a huge fight,He and my mom got into a huge fight.
+37,18,clear,one of my uncles stopped calling me trevor he called,One of my uncles stopped calling me Trevor
+37,10,clear,why doesn't your mother buy it for you,Why doesn’t your mother buy it for you?
+37,1,-4 SNR,eyebrows were gone,My eyebrows were gone
+37,27,+2 SNR,the therapists did give me a series of tests,The therapists did give me a series of tests
+37,28,+2 SNR,cuz i could always find loopholes in the law,Because I could always find loopholes in the law
+37,19,+2 SNR,the lawyer in me maintains that i'm completely innocent,The lawyer in me maintains that I am completely innocent
+37,12,clear,my mom was smart and had a sharp tongue but,My mom was smart and had a sharp tongue
+37,14,-4 SNR,in my mind i was,"In my mind, I wasn’t breaking the rules"
+37,25,clear,they kicked abel out of the garage,They kicked Abel out of the garage
+37,30,+2 SNR,if only my mom had,"Man, if only my mom hit me like this"
+37,4,-4 SNR,i was,"I was hyperactive, too"
+37,15,clear,i didn't get into trouble when it happened,I didn’t get into trouble with my mom when it happened
+37,24,clear,that's why there's a fire brigade,That’s why there’s a fire brigade
+37,2,-4 SNR,i loved and i especially loved fireworks,I loved fire and I especially loved fireworks
+37,6,-4 SNR,go to the bathroom and look at yourself,Go to the bathroom and look at yourself.
+37,20,clear,things catch fire sometimes,Things catch fire sometimes.
+37,16,-4 SNR,a box of matches would be too,"I had a box of matches with me, too"
+37,11,clear,black people's dogs don't play fetch,Black people's dogs don't play fetch
+37,21,-4 SNR,misbehaving,Why did I keep misbehaving?
+37,3,-4 SNR,they called me rubbish bin,They called me the rubbish bin of the family
+38,21,+2 SNR,why did i keep misbehaving,Why did I keep misbehaving?
+38,18,clear,one of my uncles stopper calling me trevor he called me,One of my uncles stopped calling me Trevor
+38,19,+2 SNR,the lawyer in me maintains that i am completely innocent,The lawyer in me maintains that I am completely innocent
+38,20,clear,things catch fire sometimes,Things catch fire sometimes.
+38,14,clear,in my mind i wasn't breaking the rules,"In my mind, I wasn’t breaking the rules"
+38,11,-4 SNR,black people's dogs don't play fetch,Black people's dogs don't play fetch
+38,1,-4 SNR,my eyebrows were gone,My eyebrows were gone
+38,10,clear,why doesn't your mother buy it for you,Why doesn’t your mother buy it for you?
+38,27,+2 SNR,the therapists did give me a series of tests,The therapists did give me a series of tests
+38,30,clear,if only my mom hit me like this,"Man, if only my mom hit me like this"
+38,7,clear,your son was laughing while we were hitting him,Your son was laughing while we were hitting him.
+38,6,+2 SNR,go to the bathroom and look at yourself,Go to the bathroom and look at yourself.
+38,8,-4 SNR,i almost trimmed the ear,My mom was forever trying to rein me in.
+38,5,clear,the two things i loved most were fire and knives,The two things I loved most were fire and knives.
+38,3,+2 SNR,they called me the rubbish bin of the family,They called me the rubbish bin of the family
+38,29,+2 SNR,the kid was a bully,A kid was bullying me
+38,2,-4 SNR,i loved fire and i especially loved fire birds,I loved fire and I especially loved fireworks
+38,15,clear,i didn't get in trouble with my mom when it happened,I didn’t get into trouble with my mom when it happened
+38,12,+2 SNR,my mom was smart and had a sharp tongue but i,My mom was smart and had a sharp tongue
+38,24,-4 SNR,that's why there is a fire,That’s why there’s a fire brigade
+38,17,clear,at one point we took a break to get a snack,At one point we took a break to go get a snack
+38,4,+2 SNR,i was hyperactive too,"I was hyperactive, too"
+38,23,-4 SNR,he and my mom got into a huge fight,He and my mom got into a huge fight.
+38,9,clear,and i would play with her son whenever we stayed there,And I’d play with her son whenever we stayed there
+38,28,-4 SNR,because i could always find,Because I could always find loopholes in the law
+38,16,+2 SNR,i had a box of matches with me too,"I had a box of matches with me, too"
+38,25,-4 SNR,they kicked abel out of the garage,They kicked Abel out of the garage
+38,13,+2 SNR,"when it came to discipline, catholic school was no joke","When it came to discipline, Catholic school was no joke"
+38,22,-4 SNR,the white family came home and stood on the street,The white family came home and stood on the street
+38,26,-4 SNR,they basically lived with us from then on,Abel basically lived with us from then on.
+39,14,+2 SNR,in my mind that wasnt,"In my mind, I wasn’t breaking the rules"
+39,18,+2 SNR,one of my uncles stopped calling me trevor,One of my uncles stopped calling me Trevor
+39,15,+2 SNR,i didnt get into trouble with my mum when it happened,I didn’t get into trouble with my mom when it happened
+39,2,+2 SNR,i loved fire and i especially loved fire when,I loved fire and I especially loved fireworks
+39,21,clear,why did i keep misbehaving,Why did I keep misbehaving?
+39,17,clear,"at one point, we took a break to go get a snack",At one point we took a break to go get a snack
+39,27,clear,the therapists did give me a series of tests,The therapists did give me a series of tests
+39,28,clear,cause i could always find loopholes in the law,Because I could always find loopholes in the law
+39,25,clear,they kicked able out of the garage with,They kicked Abel out of the garage
+39,11,-4 SNR,black peoples dogs,Black people's dogs don't play fetch
+39,6,-4 SNR,go to the back and look at yourself,Go to the bathroom and look at yourself.
+39,9,+2 SNR,and i played with her son anytime we stayed there,And I’d play with her son whenever we stayed there
+39,23,clear,he and my mum got into a huge fight,He and my mom got into a huge fight.
+39,26,-4 SNR,able basically lived with us then,Abel basically lived with us from then on.
+39,12,clear,my mum was smart and had a sharp tongue but i,My mom was smart and had a sharp tongue
+39,16,+2 SNR,i had a box of matches with me too,"I had a box of matches with me, too"
+39,4,-4 SNR,i was bag,"I was hyperactive, too"
+39,13,-4 SNR,when it came to catholic schools,"When it came to discipline, Catholic school was no joke"
+39,10,-4 SNR,where does your mother buy it from,Why doesn’t your mother buy it for you?
+39,29,+2 SNR,kid was bullied,A kid was bullying me
+39,3,-4 SNR,they called me rubbish because,They called me the rubbish bin of the family
+39,22,clear,the white family came home and stood on the streets,The white family came home and stood on the street
+39,20,+2 SNR,things catch fire sometimes,Things catch fire sometimes.
+39,1,clear,my eyebrows were gone,My eyebrows were gone
+39,5,clear,the two things i loved most were fire and knives,The two things I loved most were fire and knives.
+39,8,-4 SNR,my mums forever,My mom was forever trying to rein me in.
+39,30,-4 SNR,my mum,"Man, if only my mom hit me like this"
+39,19,-4 SNR,the lawyer maintains,The lawyer in me maintains that I am completely innocent
+39,7,+2 SNR,the way your son was laughing while we were hitting him,Your son was laughing while we were hitting him.
+39,24,+2 SNR,thats why there's a fire brigade,That’s why there’s a fire brigade
+40,11,+2 SNR,black peoples dogs dont play fetch,Black people's dogs don't play fetch
+40,10,clear,why doesnt your mother buy it for you,Why doesn’t your mother buy it for you?
+40,8,+2 SNR,my mom was forever trying to reign me in,My mom was forever trying to rein me in.
+40,5,-4 SNR,if there is two things i love the most fire,The two things I loved most were fire and knives.
+40,24,-4 SNR,thats why there is a firealarm,That’s why there’s a fire brigade
+40,20,-4 SNR,things catch fire sometimes,Things catch fire sometimes.
+40,3,-4 SNR,they called me rubish man,They called me the rubbish bin of the family
+40,1,clear,my eyebrows were gone,My eyebrows were gone
+40,23,clear,here my mom and i got into a huge fight,He and my mom got into a huge fight.
+40,21,+2 SNR,why did i keep misbehaving,Why did I keep misbehaving?
+40,22,-4 SNR,the white family came home and stood there,The white family came home and stood on the street
+40,29,clear,the kid was bullying me,A kid was bullying me
+40,12,+2 SNR,my mom was smart and had a sharp tongue,My mom was smart and had a sharp tongue
+40,26,+2 SNR,able basically lived with us there on,Abel basically lived with us from then on.
+40,2,+2 SNR,i loved fire and i especially loved fireworks,I loved fire and I especially loved fireworks
+40,6,-4 SNR,go to the bathroom and look at yourself,Go to the bathroom and look at yourself.
+40,13,+2 SNR,when it came to discipline catholic school was no joke,"When it came to discipline, Catholic school was no joke"
+40,28,-4 SNR,cause i always could find,Because I could always find loopholes in the law
+40,18,+2 SNR,one of my uncles stopped calling me trevor,One of my uncles stopped calling me Trevor
+40,17,clear,at one point we took a break to get a snack,At one point we took a break to go get a snack
+40,9,+2 SNR,and i played with her son whenver we stayed there,And I’d play with her son whenever we stayed there
+40,30,-4 SNR,if only my mom,"Man, if only my mom hit me like this"
+40,25,clear,they kicked able out of the garage,They kicked Abel out of the garage
+40,19,clear,the lawyer in me maintains that i am completely innocent,The lawyer in me maintains that I am completely innocent
+40,27,-4 SNR,the gave me a series of tests,The therapists did give me a series of tests
+40,4,+2 SNR,i was hyperactive too,"I was hyperactive, too"
+40,15,clear,i didnt get in trouble with my mom when it happened,I didn’t get into trouble with my mom when it happened
+40,14,-4 SNR,in my mind i was a great leader,"In my mind, I wasn’t breaking the rules"
+40,16,clear,i had a boxes of matches with me too,"I had a box of matches with me, too"
+40,7,clear,your son was laughing while we were hitting him,Your son was laughing while we were hitting him.
+41,2,-4 SNR,especially loves,I loved fire and I especially loved fireworks
+41,26,-4 SNR,NA,Abel basically lived with us from then on.
+41,29,clear,the kid was bullying me,A kid was bullying me
+41,8,-4 SNR,NA,My mom was forever trying to rein me in.
+41,20,+2 SNR,things catch fire sometimes,Things catch fire sometimes.
+41,3,+2 SNR,they called me the rubbish bin of the family,They called me the rubbish bin of the family
+41,4,clear,i was hyperactive too,"I was hyperactive, too"
+41,12,-4 SNR,NA,My mom was smart and had a sharp tongue
+41,18,-4 SNR,one of my uncles stopped calling,One of my uncles stopped calling me Trevor
+41,11,-4 SNR,NA,Black people's dogs don't play fetch
+41,15,+2 SNR,i didn't get into trouble with my mom when it happened,I didn’t get into trouble with my mom when it happened
+41,14,+2 SNR,in my mind i wasn't breaking the rules,"In my mind, I wasn’t breaking the rules"
+41,21,+2 SNR,why did i keep misbehaving,Why did I keep misbehaving?
+41,5,clear,the too things i loved most were fire and knives,The two things I loved most were fire and knives.
+41,22,clear,the white family came home and stood on the street,The white family came home and stood on the street
+41,25,+2 SNR,they kicked abel out of the garage,They kicked Abel out of the garage
+41,17,-4 SNR,at one point we took a break to go get a snack,At one point we took a break to go get a snack
+41,9,+2 SNR,and i played with her son whenever we stayed there,And I’d play with her son whenever we stayed there
+41,1,+2 SNR,my eyebrows were gone,My eyebrows were gone
+41,24,clear,thats why there is a fire brigade,That’s why there’s a fire brigade
+41,6,+2 SNR,go to the bathroom and look at yourself,Go to the bathroom and look at yourself.
+41,28,clear,cause i could always find loopholes in the law,Because I could always find loopholes in the law
+41,23,+2 SNR,here my mom got into a huge fight,He and my mom got into a huge fight.
+41,10,clear,why doesn't your mother buy it for you,Why doesn’t your mother buy it for you?
+41,16,clear,i had a box of matches with me too,"I had a box of matches with me, too"
+41,13,-4 SNR,when it came to .. catholic school was,"When it came to discipline, Catholic school was no joke"
+41,27,-4 SNR,give me a series of tests,The therapists did give me a series of tests
+41,30,-4 SNR,NA,"Man, if only my mom hit me like this"
+41,19,clear,the lawyer in me maintains that i am completely innocent,The lawyer in me maintains that I am completely innocent
+41,7,clear,your son was laughing while we were hitting him,Your son was laughing while we were hitting him.
+42,5,clear,the two things i liked the most were fire and knives,The two things I loved most were fire and knives.
+42,15,+2 SNR,i didnt get into trouble with my mom when it happened,I didn’t get into trouble with my mom when it happened
+42,24,clear,that's why there's a fire brigade,That’s why there’s a fire brigade
+42,7,+2 SNR,your son was laughing while we were hitting him,Your son was laughing while we were hitting him.
+42,21,-4 SNR,NA,Why did I keep misbehaving?
+42,9,-4 SNR,whenever we stayed,And I’d play with her son whenever we stayed there
+42,26,clear,able basically lived with us from then on,Abel basically lived with us from then on.
+42,13,+2 SNR,"when it came to discipline, catholic schools were no joke","When it came to discipline, Catholic school was no joke"
+42,22,+2 SNR,the white family came home and stood on the streets,The white family came home and stood on the street
+42,1,clear,my eyebrows were gone,My eyebrows were gone
+42,14,+2 SNR,"in my mind, that wasn't breaking news","In my mind, I wasn’t breaking the rules"
+42,17,-4 SNR,"at one point, we took a break to go get a snack",At one point we took a break to go get a snack
+42,20,+2 SNR,things catch fire sometimes,Things catch fire sometimes.
+42,28,clear,'cause i could always find loopholes in the law,Because I could always find loopholes in the law
+42,29,-4 SNR,NA,A kid was bullying me
+42,8,+2 SNR,my mom was forever trying to reign me in,My mom was forever trying to rein me in.
+42,23,clear,here my mom and i got into a huge fight,He and my mom got into a huge fight.
+42,12,clear,my mom was sharp and had a sharp tongue but i,My mom was smart and had a sharp tongue
+42,19,+2 SNR,the lawyer in me maintains that i am completely innocent,The lawyer in me maintains that I am completely innocent
+42,4,clear,i was hyperactive too,"I was hyperactive, too"
+42,6,clear,go to the bathroom and look at yourself,Go to the bathroom and look at yourself.
+42,30,-4 SNR,if only my mom,"Man, if only my mom hit me like this"
+42,27,-4 SNR,the therapists did give me a series of tests,The therapists did give me a series of tests
+42,16,-4 SNR,NA,"I had a box of matches with me, too"
+42,2,-4 SNR,i i especially liked fireworks,I loved fire and I especially loved fireworks
+42,18,-4 SNR,one of my uncles stopped,One of my uncles stopped calling me Trevor
+42,3,+2 SNR,they call me the rubbish bin of the family,They called me the rubbish bin of the family
+42,25,clear,they kicked able out of the garage,They kicked Abel out of the garage
+42,10,+2 SNR,why doesn't your mother buy it from you,Why doesn’t your mother buy it for you?
+42,11,-4 SNR,black peoples' dogs don't play fetch,Black people's dogs don't play fetch
