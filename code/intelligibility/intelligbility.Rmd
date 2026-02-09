@@ -1,0 +1,99 @@
+---
+title: "Speech Intelligibility"
+output: html_document
+date: "2025-06-03"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Speech Intelligibility Analysis
+
+```{r}
+library(tidyverse)
+library(ggdist)
+library(janitor)
+library(autoscore)
+library(DescTools)
+library(emmeans)
+library(lmerTest)
+library(scales)
+library(viridis)
+library(ggsci)
+library(broom)
+library(ggbeeswarm)
+library(effectsize)
+library(readxl)
+library(patchwork)
+library(report)
+```
+
+```{r}
+colours = c('#44c3dc','#4f74c9', '#eb6a5e','#38B686', '#3895B6','#5456BC')
+```
+
+## Import Masters
+
+```{r}
+intelligibility_data = read_csv('intelligibility_responses.csv')
+```
+
+## Analysis
+
+```{r}
+data = intelligibility_data %>% 
+	autoscore() %>% 
+	group_by(id, noise_condition) %>% 
+	group_by(id, noise_condition) %>%
+  summarise(
+    total_correct = sum(autoscore),
+    total_words = sum(str_count(target, "\\S+")),
+    score = (total_correct / total_words),
+    .groups = 'drop'
+  ) %>% 
+	rename(subject = id)
+```
+
+## Statistics
+
+```{r}
+model = data %>% 
+  filter(!subject %in% c(11, 16, 25)) %>% 
+	lmer(score ~ noise_condition + (1 | subject), data=.)
+
+anova(model) %>% 
+	as.tibble()
+model %>% 
+	emmeans(~noise_condition) %>% 
+	pairs() %>% as.tibble()
+eta_squared(model, alternative = 'two.sided')
+
+```
+
+## Plot
+
+```{r}
+i1 = data %>% 
+  filter(!subject %in% c(11, 16, 25)) %>%
+  ggplot(aes(x = noise_condition, y = score)) +
+	geom_line(aes(group = subject), alpha = 0.1) +
+	stat_summary(fun = mean, geom = "line", color = colours[6], size = 1, aes(group = 1)) +
+	stat_summary(fun = mean, geom = "point", color = colours[6], size = 3, aes(group = 1)) +
+	stat_summary(fun.data = "mean_se", geom = "errorbar", color = colours[6], 
+							 size = 1, width = 0.1) +
+	labs(x = 'Noise Condition', y = 'Proportion of Words Correct') +
+	scale_x_discrete(labels = c('-4 dB SNR', '+2 dB SNR', 'clear')) +
+	theme_ggdist() +
+	theme(text = element_text(size = 16)) 
+i1
+```
+
+## Exclude
+
+We will exclude participants if their average PWC for the clear conditions falls below 0.80.
+
+```{r}
+data %>% 
+	filter(noise_condition == 'clear', score < 0.80)
+```

@@ -1,0 +1,388 @@
+---
+title: "Auditory Recall"
+output: html_document
+date: "2026-01-15"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+library(tidyverse)
+library(ggdist)
+library(ggeffects)
+library(DescTools)
+library(emmeans)
+library(lmerTest)
+library(lm.beta)
+library(scales)
+library(viridis)
+library(ggsci)
+library(broom)
+library(ggbeeswarm)
+library(effectsize)
+library(MuMIn)
+library(readxl)
+library(patchwork)
+library(report)
+```
+
+```{r}
+colours = c('#44c3dc','#4f74c9', '#eb6a5e','#38B686', '#3895B6')
+```
+
+### Remove
+
+```{r}
+remove = c(5,7,8,11,16,25,21,41)
+```
+
+## Import Data
+
+```{r}
+centrality = read_csv('centrality.csv') %>% 
+  mutate(story_id = as.factor(story_id))
+
+event_recall = read_csv('event_recall.csv') %>% 
+  select(subject:event_number) %>% 
+    mutate(across(c(subject, story_id, noise_condition), as.factor)) %>% 
+  left_join(centrality, by=c('event_number', 'story_id')) %>% 
+  filter(!subject %in% remove)
+```
+
+# Event Recall
+
+## Statistics
+
+```{r}
+model = event_recall %>% 
+  pivot_longer(cols = c('recall_events', 'random_events'), 
+               names_to = 'type', values_to = 'score') %>% 
+  lmer(score ~ type + (1 + type | subject) + (1 | story_id), data=.) 
+
+anova(model)
+eta_squared(model, alternative = 'two.sided')
+
+model %>% 
+  emmeans(~ type) %>% 
+  pairs()
+```
+
+```{r}
+# Event Recall Scores
+model = event_recall %>% 
+  lmer(recall_events ~ noise_condition + (1 + noise_condition | subject) + (1 | story_id), .)
+
+anova(model)
+eta_squared(model, alternative = 'two.sided')
+
+model %>% 
+  emmeans(~ noise_condition) %>% 
+  pairs() 
+
+```
+
+## Plot
+
+```{r}
+p1 = event_recall %>%
+  pivot_longer(cols = c('recall_events', 'random_events'), 
+               names_to = 'type', values_to = 'score') %>% 
+  group_by(subject, story_id, type) %>% 
+  summarize(score = mean(score), .groups = 'drop') %>% 
+  mutate(type = factor(type, levels = c('recall_events', 'random_events'))) %>% 
+  ggplot(aes(type, score, fill = type)) +
+  stat_summary(fun.data = mean_se, geom = 'bar') +
+  stat_summary(fun.data = mean_se, geom = 'errorbar', linewidth = 0.5, width = 0.2) +
+  geom_line(aes(group = paste(subject, story_id)), alpha = 0.1) +
+  scale_fill_manual(values = colours[4:5]) +
+  scale_x_discrete(labels = c('observed ', 'chance')) +
+  labs(x = 'Event Type', y = 'Recall Score') + 
+  theme_ggdist() +
+  theme(legend.position = 'none', text = element_text(size = 14))
+p1
+```
+
+```{r}
+p2 = event_recall %>%
+  group_by(subject, story_id, noise_condition) %>% 
+  summarize(recall_events = mean(recall_events), .groups = 'drop') %>% 
+  ggplot(aes(noise_condition, recall_events, fill = noise_condition)) +
+  stat_summary(fun.data = mean_se, geom = 'bar') +
+  stat_summary(fun.data = mean_se, geom = 'errorbar', linewidth = 0.5, width = 0.2) +
+  geom_line(aes(group = subject), alpha = 0.1) +
+  scale_fill_manual(values = colours) +
+  scale_x_discrete(labels = c('-4SNR', '+2SNR', 'clear')) +
+  labs(x = 'Noise Condition', y = 'Recall Score') + 
+  theme_ggdist() +
+  theme(legend.position = 'none', text = element_text(size = 14))
+p2
+```
+
+# Temporal Order
+
+## Statistics
+
+```{r}
+model = event_recall %>% 
+  pivot_longer(cols = c('diagonal_score', 'reversed_score'), 
+             names_to = 'temporality', values_to = 'score') %>% 
+  lmer(score ~ noise_condition * temporality + 
+         (1 | subject) + (1 | story_id), data = .)
+
+anova(model)
+eta_squared(model, alternative = 'two.sided')
+
+model %>% 
+  emmeans(~ noise_condition * temporality) %>% 
+  contrast('eff', by = 'noise_condition') %>% 
+  as.tibble()
+```
+
+## Plot
+
+```{r}
+labeled_colours = c('-4SNR' = '#44c3dc', '+2SNR' = '#4f74c9', 'clear' = '#eb6a5e')
+
+lighten_colour = function(colour, factor = 0.6) {
+  colorspace::lighten(colour, amount = factor)
+}
+
+all_colours = c(sapply(labeled_colours, identity), sapply(labeled_colours, lighten_colour, factor = 0.5))
+
+names(all_colours) <- c(
+  paste0(names(labeled_colours), "_diagonal_score"),
+  paste0(names(labeled_colours), "_reversed_score")
+)
+```
+
+```{r}
+p3 = event_recall %>% 
+  pivot_longer(cols = c('diagonal_score', 'reversed_score'), 
+             names_to = 'temporality', values_to = 'score') %>% 
+  group_by(subject, story_id, noise_condition, temporality) %>% 
+  summarize(score = mean(score), .groups = 'drop') %>% 
+  mutate(condition_label = factor(
+    paste0(noise_condition, "_", temporality), 
+		levels = 
+			c("-4SNR_diagonal_score", "-4SNR_reversed_score",
+				"+2SNR_diagonal_score", "+2SNR_reversed_score",
+				"clear_diagonal_score", "clear_reversed_score")
+		)) %>% 
+  ggplot(aes(x = noise_condition, y = score, fill = condition_label)) +
+  stat_summary(fun.data = mean_se, geom = 'bar', position = position_dodge(width = 0.9)) +
+	geom_line(aes(group = interaction(subject, story_id, noise_condition)),
+            alpha = 0.1, position = position_nudge(c(-.23, .23))) +
+  stat_summary(fun.data = mean_se, geom = 'errorbar', 
+               width = 0.2, position = position_dodge(width = 0.9), linewidth = 0.5) +
+  scale_fill_manual(values = all_colours) +
+  scale_x_discrete(labels = c('-4SNR', '+2SNR', 'clear')) +
+  labs(x = "Noise Condition", y = "Recall Score") +
+	ylim(0,0.56) +
+  theme_ggdist() +
+  theme(
+    legend.title = element_blank(),
+    legend.position = 'none',
+    text = element_text(size = 14)
+  )
+p3
+```
+
+# Temporal Divergence
+
+## Statistics
+
+```{r}
+model = event_recall %>% 
+  group_by(subject, story_id, noise_condition) %>% 
+  summarize(divergence = RMSE(event_number, recall_index), .groups = 'drop') %>% 
+  lmer(divergence ~ noise_condition + (1 | subject) + (1 | story_id), data = .)
+
+anova(model)
+eta_squared(model, alternative = 'two.sided')
+
+model %>% 
+  emmeans(~ noise_condition) %>% 
+  pairs()
+```
+
+## Plot
+
+```{r}
+p4 = event_recall %>% 
+  group_by(subject, story_id, noise_condition) %>% 
+  summarize(divergence = RMSE(event_number, recall_index), .groups = 'drop') %>% 
+  ggplot(aes(noise_condition, divergence, fill = noise_condition)) +
+  stat_summary(fun.data = mean_se, geom = 'bar') +
+  geom_line(aes(group = subject), alpha = 0.1) +
+  stat_summary(fun.data = mean_se, geom = 'errorbar', size = 0.5, width = 0.2) +
+  scale_x_discrete(labels = c('-4SNR', '+2SNR', 'clear')) +
+  scale_fill_manual(values = colours) +
+  labs(x = 'Noise Condition', y = 'Temporal Divergence') +
+  theme_ggdist() +
+  theme(legend.position = 'none', text = element_text(size = 14))
+p4
+```
+
+# Segmentation on Recall
+
+## Agreement Index
+
+```{r}
+agreement = read_csv('agreement_auditory.csv') %>% 
+  mutate(across(c(subject, story_id, noise_condition), as.factor))
+```
+
+### Statistics
+
+```{r}
+model = event_recall %>% 
+  left_join(agreement, by = c('subject', 'story_id', 'noise_condition')) %>% 
+  lmer(agreement_indexs ~ noise_condition + (1 | subject) + (1 | story_id), data = .) %>% 
+  resid() %>% 
+  mutate(event_recall, residuals = .) %>% 
+  lmer(recall_events ~ noise_condition * residuals + (1 | subject) + (1 | story_id), data = .)
+  
+anova(model)
+eta_squared(model, alternative = 'two.sided')
+
+model %>% 
+  emtrends(~ noise_condition, var = 'residuals') %>% 
+  pairs()
+
+model %>% 
+  emtrends(~ noise_condition, var = 'residuals') %>% 
+  summary(infer = TRUE) %>% 
+  as.tibble()
+```
+
+### Plot
+
+```{r}
+predicted = ggpredict(model, terms = c("residuals [-0.4:0.4 by=0.01]", "noise_condition")) %>%
+  rename(noise_condition = group)
+
+p5 = predicted %>% 
+  ggplot(aes(x = x, y = predicted, colour = noise_condition)) +
+  geom_ribbon(aes(x = x, ymin = conf.low, ymax = conf.high, fill = noise_condition), 
+              alpha = 0.1, inherit.aes = FALSE) +
+  geom_line(aes(x = x, y = predicted, colour = noise_condition), 
+            size = 1.5, inherit.aes = FALSE, show.legend = FALSE) +
+  scale_colour_manual(values = colours, labels = c('-4 dB SNR', '+2 dB SNR', 'clear')) +
+  scale_fill_manual(values = colours, labels = c('-4 dB SNR', '+2 dB SNR', 'clear')) +
+  labs(x = "Residualized Agreement Index",
+       y = "Predicted Recall",
+       colour = NULL) +
+  theme_ggdist() +
+  theme(strip.background = element_blank(),
+        strip.text = element_blank(),
+        legend.position = 'top',
+        legend.title = element_blank(),
+        text = element_text(size = 14))
+
+p5
+```
+
+## Sliding Window
+
+```{r}
+sliding_window = read_csv('sliding_window_proportions_event_end.csv') %>% 
+  mutate(across(c(subject, story_id, noise_condition), as.factor))
+```
+
+### Statistics
+
+```{r}
+model = event_recall %>% 
+  left_join(sliding_window, by = c('subject', 'story_id', 'noise_condition')) %>% 
+  filter(!is.na(proportion)) %>% 
+  lmer(proportion ~ noise_condition + (1 | subject) + (1 | story_id), data = .) %>% 
+  resid() %>% 
+  mutate(event_recall %>% 
+           left_join(sliding_window, by = c('subject', 'story_id', 'noise_condition')) %>%
+           filter(!is.na(proportion)), 
+         residuals = .) %>% 
+  lmer(recall_events ~ noise_condition * residuals + (1 | subject) + (1 | story_id), data = .)
+  
+anova(model) 
+eta_squared(model, alternative = 'two.sided')
+
+model %>% 
+  emtrends(~ noise_condition, var = 'residuals') %>% 
+  pairs()
+
+model %>% 
+  emtrends(~ noise_condition, var = 'residuals') %>% 
+  summary(infer = TRUE)
+```
+
+### Plot
+
+```{r}
+predicted = ggpredict(model, terms = c("residuals [-0.4:0.4 by=0.01]", "noise_condition")) %>%
+  rename(noise_condition = group)
+
+p6 = predicted %>% 
+  ggplot(aes(x = x, y = predicted, colour = noise_condition)) +
+  geom_ribbon(aes(x = x, ymin = conf.low, ymax = conf.high, fill = noise_condition), 
+              alpha = 0.1, inherit.aes = FALSE) +
+  geom_line(aes(x = x, y = predicted, colour = noise_condition), 
+            size = 1.5, inherit.aes = FALSE, show.legend = FALSE) +
+  scale_colour_manual(values = colours, labels = c('-4 dB SNR', '+2 dB SNR', 'clear')) +
+  scale_fill_manual(values = colours, labels = c('-4 dB SNR', '+2 dB SNR', 'clear')) +
+  labs(x = "Residualized Proportion Identified",
+       y = "Predicted Recall",
+       colour = NULL) +
+  theme_ggdist() +
+  theme(strip.background = element_blank(),
+        strip.text = element_blank(),
+        legend.position = 'top',
+        legend.title = element_blank(),
+        text = element_text(size = 14))
+p6
+```
+
+# Event Centrality
+
+## Statistics
+
+```{r}
+model = event_recall %>% 
+  lmer(recall_events ~ noise_condition * centrality + (1 + noise_condition | subject) + (1 | story_id), .)
+
+summary(model)
+anova(model) %>% as.tibble()
+eta_squared(model, alternative = 'two.sided')
+
+model %>% 
+  emmeans(~ noise_condition) %>% 
+  pairs()
+
+test(emtrends(model, pairwise~noise_condition, var='centrality'), cross.adjust = 'tukey')
+```
+
+## Plot
+
+```{r}
+predicted = ggpredict(model, terms = c("centrality", "noise_condition")) %>% 
+	rename(noise_condition = group)
+
+p7 = ggplot(event_recall, aes(centrality, recall_events, colour = noise_condition)) +
+  geom_line(stat = "smooth", method = "lm", aes(group = subject), colour = 'black', alpha = 0.1, show.legend = FALSE) +
+  geom_ribbon(data = predicted, aes(x = x, ymin = conf.low, ymax = conf.high, fill = noise_condition), 
+              alpha = 0.2, inherit.aes = FALSE) +
+  geom_line(data = predicted, aes(x = x, y = predicted, colour = noise_condition), size = 1.5, inherit.aes = FALSE) +
+  facet_wrap(~noise_condition) +
+  scale_colour_manual(values = colours) +
+  scale_fill_manual(values = colours) +
+  labs(x = "Centrality", y = "Recall Score", colour = NULL) +
+  theme_ggdist() +
+  ylim(-0.02, 0.7) +
+	xlim(0,0.4) +
+  theme(strip.background = element_blank(),
+        strip.text = element_blank(),
+        legend.position = "none",
+        text = element_text(size = 14))
+p7
+```
