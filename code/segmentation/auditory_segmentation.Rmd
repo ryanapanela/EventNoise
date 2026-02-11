@@ -1,0 +1,938 @@
+---
+title: "auditory_segmentation_analysis"
+output: html_document
+date: "2025-01-15"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+library(tidyverse)
+library(ggdist)
+library(DescTools)
+library(emmeans)
+library(lmerTest)
+library(scales)
+library(viridis)
+library(ggsci)
+library(broom)
+library(ggbeeswarm)
+library(effectsize)
+library(readxl)
+library(patchwork)
+library(report)
+library(car)
+library(broom.mixed)
+library(ggeffects)
+source('esMethods_agreement.R')
+```
+
+## Import Data
+
+```{r}
+data_dir = '../../data/segmentation/'
+setwd(data_dir)
+
+auditory_data = read_csv('auditory_data.csv') %>% 
+  mutate(noise_condition = factor(noise_condition, levels=c('-4SNR', '+2SNR', 'clear')),
+         across(c(subject, story_id), as.factor)) %>% 
+  mutate(story_id = as.factor(story_id))
+
+auditory_series = read_csv('auditory_series.csv') %>% 
+  mutate(noise_condition = factor(noise_condition, levels=c('-4SNR', '+2SNR', 'clear'))) %>% 
+  mutate(story_id = as.factor(story_id))
+
+normative_boundaries = read_csv('../stories/normative_boundaries.csv') %>% 
+  mutate(story_id = as.factor(story_id))
+```
+
+## Constants
+
+```{r}
+# Total Words
+story1_dur = 585.51
+story2_dur = 545.39
+story3_dur = 667.25
+
+# Word Times
+word_times = read_csv('../word_times.csv') %>% 
+  mutate(story_id = as.factor(story_id))
+
+# Colours for Plots 
+colours = c( '#3895B6', '#41D3CB', '#38B686', '#5456BC')
+colours = c('#44c3dc','#4f74c9', '#eb6a5e','#38B686', '#3895B6')
+```
+
+# Density
+
+## Plot
+
+### Proportion of Participants
+
+```{r}
+p1 = auditory_series %>%
+  group_by(time_series, story_id, noise_condition) %>%
+  summarise(
+    mean_response = mean(smoothed_responses),
+    se = sd(smoothed_responses) / sqrt(n()),
+    .groups = 'drop'
+  ) %>%
+  slice_sample(n = 32000) %>% 
+  filter(story_id == 1) %>% 
+  ggplot(aes(x = time_series, y = mean_response, color = noise_condition)) +
+  geom_line(size = 0.4) +
+  #geom_ribbon(aes(ymin = mean_response - se, ymax = mean_response + se, fill = noise_condition), alpha = 0.2, color = NA) +
+  scale_colour_manual(values = colours, 
+                     labels = c('-4SNR' = '-4 dB SNR',
+                               '+2SNR' = '+2 dB SNR',
+                               'clear' = 'clear')) +
+  scale_fill_manual(values = colours, 
+                    labels = c('-4SNR' = '-4 dB SNR',
+                              '+2SNR' = '+2 dB SNR',
+                              'clear' = 'clear')) +
+  scale_x_continuous(breaks = c(0, 300)) +
+  labs(x = "Time (s)",
+       y = "Proportion of Participants") +
+  facet_wrap(~noise_condition, ncol = 3) +
+  theme_ggdist() +
+  theme(legend.position = 'top', 
+        legend.title = element_blank(),
+        strip.text = element_blank(), text = element_text(size = 14))
+p1
+```
+
+# Number of Events
+
+## Analysis
+
+```{r}
+num_events = auditory_data %>% 
+  group_by(subject, story_id, noise_condition) %>% 
+  summarise(num_events = n(), .groups = 'drop') %>% 
+  mutate(scaled_num_events = num_events / case_when(story_id == 1 ~ story1_dur,
+                                                    story_id == 2 ~ story2_dur,
+                                                    story_id == 3 ~ story3_dur) * 60)
+```
+
+## Statistics
+
+```{r}
+model = num_events %>% 
+  lmer(scaled_num_events ~ noise_condition + (1 | subject) + (1 | story_id), 
+       data = .)
+
+anova(model)
+model %>% 
+  emmeans(~ noise_condition) %>% 
+  pairs()
+eta_squared(model, alternative = 'two.sided')
+
+```
+
+## Plot
+
+```{r}
+p2 = num_events %>% 
+  mutate(noise_condition = factor(noise_condition, levels=c('-4SNR', '+2SNR', 'clear'))) %>% 
+  ggplot(aes(noise_condition, scaled_num_events, fill = noise_condition)) +
+  stat_summary(fun.data = mean_se, geom = 'bar') +
+	scale_x_discrete(labels = c('-4SNR', '+2SNR', 'clear')) +
+	scale_fill_manual(values = colours) +
+  geom_line(aes(group = subject), alpha = 0.1) +
+	stat_summary(fun.data = mean_se, geom = 'errorbar', width = 0.2, linewidth = 0.5) +
+	labs(x = 'Noise Condition', y = 'Number of Events') +
+	theme_ggdist() +
+	theme(legend.position = 'none', text = element_text(size = 14))
+
+p2
+```
+
+# Agreement Index
+
+## Analysis
+
+```{r}
+grouped_data = auditory_series %>% 
+	group_by(story_id, noise_condition) %>% 
+	group_split()
+
+agreement_auditory = tibble()
+
+for (df in grouped_data){
+	subjects = unique(df$subject)
+	story_id = unique(df$story_id)
+	noise_condition = unique(df$noise_condition)
+	
+	story_dur = case_when(
+		story_id == 1 ~ story1_dur,
+		story_id == 2 ~ story2_dur,
+		story_id == 3 ~ story3_dur
+	)
+	
+	ag_index = c()
+	for (subj in subjects){
+		
+		# Subset Data
+		dat = df %>% 
+			filter(subject == subj)
+		
+		# Calculate Agreement Index
+		sample = dat$smoothed_responses
+		group = tapply(df$smoothed_responses[df$subject != subj], 
+									 df$time_series[df$subject != subj], mean)
+		
+		agreement = agreement_index(sample, group)
+		ag_index = rbind(ag_index, agreement)
+	}
+	
+	temp = tibble(subject = subjects,
+								story_id = story_id,
+								noise_condition = noise_condition,
+								agreement_indexs = ag_index[,1])
+	
+	agreement_auditory = rbind(agreement_auditory, temp)
+}
+
+agreement_auditory = read_csv('agreement_auditory.csv')
+```
+
+## Statistics
+
+```{r}
+model = agreement_auditory %>% 
+  lmer(agreement_indexs ~ noise_condition + (1 | subject) + (1 | story_id), data = .)
+
+anova(model)
+
+model %>% 
+  emmeans(~ noise_condition) %>% 
+  pairs() 
+
+eta_squared(model, alternative = 'two.sided')
+```
+
+## Plot
+
+```{r}
+p3 = agreement_auditory %>% 
+  mutate(noise_condition = factor(noise_condition, levels=c('-4SNR', '+2SNR', 'clear'))) %>% 
+  ggplot(aes(noise_condition, agreement_indexs, fill = noise_condition)) +
+  stat_summary(fun.data = mean_se, geom = 'bar') +
+	scale_x_discrete(labels = c('-4SNR', '+2SNR', 'clear')) +
+	scale_fill_manual(values = colours) +
+  geom_line(aes(group = subject), alpha = 0.1) +
+	stat_summary(fun.data = mean_se, geom = 'errorbar', width = 0.2, linewidth = 0.5) +
+	labs(x = 'Noise Condition', y = 'Agreement Index') +
+	theme_ggdist() +
+	theme(legend.position = 'none', text = element_text(size = 14))
+
+p3
+```
+
+# Pre-Post Event Boundary
+
+## Normative Boundaries
+
+```{r}
+word_times = bind_rows(
+      word_times_1 %>% mutate(story_id = "1"),
+      word_times_2 %>% mutate(story_id = "2"),
+      word_times_3 %>% mutate(story_id = "3")
+    )
+
+normative_boundaries = normative_boundaries %>%
+  filter(group == 0) %>% 
+  mutate(story_id = as.character(story_id)) %>%
+  left_join(word_times %>% 
+              select(story_id, word_number, time_start), 
+            by = c("story_id", "word_number")) %>% 
+  left_join(word_times %>% 
+              select(story_id, word_number, previous_end = time_end) %>% 
+              mutate(word_number = word_number + 1),
+            by = c("story_id", "word_number"))
+```
+
+## Event Centre
+
+```{r}
+get_sentence_starts = function(word_times) {
+  sentence_starts = word_times %>%
+    mutate(is_period = str_ends(word, "\\.")) %>%
+    filter(is_period) %>%
+    mutate(next_word_number = word_number + 1) %>%
+    select(next_word_number) %>%
+    left_join(word_times, by = c('next_word_number' = 'word_number')) %>%
+    select(word_number = next_word_number, time_start, word)
+  
+  first_sentence = word_times %>%
+    filter(word_number == 1) %>%
+    select(word_number, time_start, word)
+  
+  bind_rows(first_sentence, sentence_starts) %>%
+    arrange(time_start)
+}
+
+find_event_centers = function(boundaries, word_times) {
+  sentence_starts = get_sentence_starts(word_times)
+  
+  boundaries %>%
+    group_by(story_id) %>%
+    arrange(story_id, time_start) %>%
+    mutate(
+      prev_time = lag(time_start, default = 0),
+      midpoint_time = (time_start + prev_time) / 2
+    ) %>%
+    group_by(story_id, time_start, prev_time, midpoint_time) %>%
+    group_modify(~{
+      sentence_starts %>%
+        filter(time_start > .y$prev_time, 
+               time_start < .y$time_start) %>%
+        mutate(
+          distance_to_mid = abs(time_start - .y$midpoint_time)
+        ) %>%
+        slice_min(distance_to_mid, n = 1) %>%
+        select(event_center_time = time_start,
+               event_center_word = word,
+               word_number = word_number)
+    }) %>%
+    ungroup()
+}
+
+
+event_centers = tibble()
+for (i in c(1,2,3)){
+  event_centers = word_times %>% 
+    filter(story_id == i) %>% 
+    find_event_centers(normative_boundaries %>% filter(story_id == i), .) %>% 
+    rbind(event_centers)
+}
+
+event_centers = event_centers %>% 
+  left_join(word_times %>% 
+          select(story_id, word_number, previous_event_center_time = time_end) %>% 
+          mutate(word_number = word_number + 1),
+        by = c("story_id", "word_number")) %>% 
+  mutate(story_id = as.factor(story_id))
+```
+
+## Analysis
+
+### Event Boundary
+
+#### Event Start
+
+```{r}
+normative_auditory = auditory_data %>% 
+  mutate(story_id = as.factor(story_id)) %>% 
+  select(subject, story_id, noise_condition, times) %>% 
+  left_join(
+    normative_boundaries %>% 
+      mutate(story_id = as.factor(story_id)), 
+      select(story_id, time_start),
+    by = 'story_id'
+  ) %>% 
+  mutate(diff = times - time_start)
+```
+
+```{r}
+window_size = 3
+step_size = 0.05
+time_range = -11:21
+windows = seq(min(time_range), max(time_range) - window_size, by = step_size)
+
+sliding_window = tibble()
+
+for (start_time in windows) {
+  end_time = start_time + window_size
+  
+  window_data = normative_auditory %>%
+    filter(diff >= start_time, diff < end_time) %>%
+    group_by(subject, story_id, noise_condition) %>%
+    summarise(count = n(),.groups = "drop") %>%
+    mutate(
+      time = (start_time + end_time) / 2,
+      window = paste0("[", start_time, ", ", end_time, ")")
+    )
+  
+  sliding_window = bind_rows(sliding_window, window_data)
+}
+
+sliding_window = sliding_window %>% 
+  left_join(
+    normative_auditory %>%
+    filter(diff >= min(time_range), diff <= max(time_range)) %>%
+    group_by(subject, story_id, noise_condition) %>%
+    summarise(total_count = n(), .groups = "drop"),
+    by = c("subject", "story_id", "noise_condition")
+    ) %>% 
+  left_join(
+    normative_boundaries %>% 
+      group_by(story_id) %>% 
+      summarise(num_events = n(), .groups = "drop"),
+    by = c('story_id') 
+    ) %>% 
+  mutate(proportion = count / num_events) %>%
+  ungroup()
+
+sliding_window = sliding_window %>% 
+  group_by(subject, story_id, noise_condition) %>% 
+  complete(time = windows + window_size/2, fill = list(proportion = 0)) %>%
+  group_by(subject, story_id, noise_condition) %>%
+  fill(total_count, num_events, .direction = "downup")
+```
+
+#### Event End
+
+```{r}
+normative_auditory_end = auditory_data %>% 
+  mutate(story_id = as.character(story_id)) %>% 
+  select(subject, story_id, noise_condition, times) %>% 
+  left_join(
+    normative_boundaries %>% 
+      select(story_id, previous_end),
+    by = 'story_id'
+  ) %>% 
+  mutate(diff = times - previous_end)
+```
+
+```{r}
+window_size = 3
+step_size = 0.05
+time_range = -11:21
+windows = seq(min(time_range), max(time_range) - window_size, by = step_size)
+
+sliding_window_end = tibble()
+
+for (start_time in windows) {
+  end_time = start_time + window_size
+  
+  window_data = normative_auditory_end %>%
+    filter(diff >= start_time, diff < end_time) %>%
+    group_by(subject, story_id, noise_condition) %>%
+    summarise(count = n(),.groups = "drop") %>%
+    mutate(
+      time = (start_time + end_time) / 2,
+      window = paste0("[", start_time, ", ", end_time, ")")
+    )
+  
+  sliding_window_end = bind_rows(sliding_window_end, window_data)
+}
+
+sliding_window_end = sliding_window_end %>% 
+  left_join(
+    normative_auditory_end %>%
+    filter(diff >= min(time_range), diff <= max(time_range)) %>%
+    group_by(subject, story_id, noise_condition) %>%
+    summarise(total_count = n(), .groups = "drop"),
+    by = c("subject", "story_id", "noise_condition")
+    ) %>% 
+  left_join(
+    normative_boundaries %>% 
+      group_by(story_id) %>% 
+      summarise(num_events = n(), .groups = "drop"),
+    by = c('story_id') 
+    ) %>% 
+  mutate(proportion = count / num_events) %>%
+  ungroup()
+
+sliding_window_end = sliding_window_end %>% 
+  group_by(subject, story_id, noise_condition) %>% 
+  complete(time = windows + window_size/2, fill = list(proportion = 0)) %>%
+  group_by(subject, story_id, noise_condition) %>%
+  fill(total_count, num_events, .direction = "downup")
+```
+
+### Event Centre
+
+#### Event Start
+
+```{r}
+centre_auditory = auditory_data %>% 
+  mutate(story_id = as.character(story_id)) %>% 
+  select(subject, story_id, noise_condition, times) %>% 
+  left_join(
+    event_centers %>% 
+      select(story_id, event_center_time),
+    by = 'story_id'
+  ) %>% 
+  mutate(diff = times - event_center_time)
+```
+
+```{r}
+window_size = 3
+step_size = 0.05
+time_range = -11:21
+windows = seq(min(time_range), max(time_range) - window_size, by = step_size)
+
+sliding_window_centre = tibble()
+
+for (start_time in windows) {
+  end_time = start_time + window_size
+  
+  window_data = centre_auditory %>%
+    filter(diff >= start_time, diff < end_time) %>%
+    group_by(subject, story_id, noise_condition) %>%
+    summarise(count = n(),.groups = "drop") %>%
+    mutate(
+      time = (start_time + end_time) / 2,
+      window = paste0("[", start_time, ", ", end_time, ")")
+    )
+  
+  sliding_window_centre = bind_rows(sliding_window_centre, window_data)
+}
+
+sliding_window_centre = sliding_window_centre %>% 
+  left_join(
+    normative_auditory_end %>%
+    filter(diff >= min(time_range), diff <= max(time_range)) %>%
+    group_by(subject, story_id, noise_condition) %>%
+    summarise(total_count = n(), .groups = "drop"),
+    by = c("subject", "story_id", "noise_condition")
+    ) %>% 
+  left_join(
+    normative_boundaries %>% 
+      group_by(story_id) %>% 
+      summarise(num_events = n(), .groups = "drop"),
+    by = c('story_id') 
+    ) %>% 
+  mutate(proportion = count / num_events) %>%
+  ungroup()
+
+sliding_window_centre = sliding_window_centre %>% 
+  group_by(subject, story_id, noise_condition) %>% 
+  complete(time = windows + window_size/2, fill = list(proportion = 0)) %>%
+  group_by(subject, story_id, noise_condition) %>%
+  fill(total_count, num_events, .direction = "downup")
+```
+
+#### Event End
+
+```{r}
+centre_auditory_end = auditory_data %>% 
+  mutate(story_id = as.character(story_id)) %>% 
+  select(subject, story_id, noise_condition, times) %>% 
+  left_join(
+    event_centers %>% 
+      select(story_id, previous_event_center_time),
+    by = 'story_id'
+  ) %>% 
+  mutate(diff = times - previous_event_center_time)
+```
+
+```{r}
+window_size = 3
+step_size = 0.05
+time_range = -11:21
+windows = seq(min(time_range), max(time_range) - window_size, by = step_size)
+
+sliding_window_centre_end = tibble()
+
+for (start_time in windows) {
+  end_time = start_time + window_size
+  
+  window_data = centre_auditory_end %>%
+    filter(diff >= start_time, diff < end_time) %>%
+    group_by(subject, story_id, noise_condition) %>%
+    summarise(count = n(),.groups = "drop") %>%
+    mutate(
+      time = (start_time + end_time) / 2,
+      window = paste0("[", start_time, ", ", end_time, ")")
+    )
+  
+  sliding_window_centre_end = bind_rows(sliding_window_centre_end, window_data)
+}
+
+sliding_window_centre_end = sliding_window_centre_end %>% 
+  left_join(
+    normative_auditory_end %>%
+    filter(diff >= min(time_range), diff <= max(time_range)) %>%
+    group_by(subject, story_id, noise_condition) %>%
+    summarise(total_count = n(), .groups = "drop"),
+    by = c("subject", "story_id", "noise_condition")
+    ) %>% 
+  left_join(
+    normative_boundaries %>% 
+      group_by(story_id) %>% 
+      summarise(num_events = n(), .groups = "drop"),
+    by = c('story_id') 
+    ) %>% 
+  mutate(proportion = count / num_events) %>%
+  ungroup()
+
+sliding_window_centre_end = sliding_window_centre_end %>% 
+  group_by(subject, story_id, noise_condition) %>% 
+  complete(time = windows + window_size/2, fill = list(proportion = 0)) %>%
+  group_by(subject, story_id, noise_condition) %>%
+  fill(total_count, num_events, .direction = "downup")
+```
+
+## Combine Data
+
+```{r}
+sliding_complete = sliding_window %>% 
+  select(subject, story_id, noise_condition, time, proportion) %>% 
+  mutate(boundary_type = 'event_start') %>% 
+  rbind(
+    sliding_window_end %>% 
+      select(subject, story_id, noise_condition, time, proportion) %>% 
+      mutate(boundary_type = 'previous_event_end'),
+    sliding_window_centre %>% 
+      select(subject, story_id, noise_condition, time, proportion) %>% 
+      mutate(boundary_type = 'centre_start'),
+    sliding_window_centre_end %>% 
+      select(subject, story_id, noise_condition, time, proportion) %>% 
+      mutate(boundary_type = 'previous_centre_end')
+  )
+
+write_csv(sliding_complete, 'sliding_complete.csv')
+```
+
+## Statistics
+
+### Event Boundary vs. Event Centre
+
+#### Event Start
+
+```{r}
+model = sliding_complete %>% 
+  filter(boundary_type %in% c('event_start', 'centre_start'),
+         -3 <= time & time <= 2) %>% 
+  mutate(period = case_when(
+    time <= -1 ~ 'pre',
+    0 <= time & time <= 2 ~ 'post',
+  )) %>% 
+  filter(!is.na(period)) %>% 
+  mutate(period = factor(period, levels = c('pre', 'post'))) %>% 
+  group_by(subject, boundary_type, period, story_id) %>% 
+  summarise(proportion = mean(proportion), .groups = 'drop') %>% 
+	lmer(proportion ~ boundary_type * period + (1 | subject) + (1 | story_id), data=.)
+
+anova(model)
+eta_squared(model, alternative = 'two.sided')
+
+model %>% 
+	emmeans(~ boundary_type * period) %>% 
+	pairs()
+```
+
+#### Event End
+
+```{r}
+model = sliding_complete %>% 
+  filter(boundary_type %in% c('previous_event_end', 'previous_centre_end'),
+         -2 <= time & time <= 3) %>% 
+  mutate(period = case_when(
+    time <= 0 ~ 'pre',
+    1 <= time & time <= 3 ~ 'post',
+  )) %>% 
+  filter(!is.na(period)) %>% 
+  mutate(period = factor(period, levels = c('pre', 'post'))) %>% 
+  group_by(subject, boundary_type, period, story_id) %>% 
+  summarise(proportion = mean(proportion), .groups = 'drop') %>% 
+	lmer(proportion ~ boundary_type * period + (1 | subject) + (1 | story_id), data=.)
+
+anova(model)
+eta_squared(model, alternative = 'two.sided')
+
+model %>% 
+	emmeans(~ boundary_type * period) %>% 
+	pairs()
+```
+
+### Noise
+
+#### Event End
+
+```{r}
+model = sliding_complete %>% 
+  filter(boundary_type == 'previous_event_end', (time >= -2 & time <= 0) | (time >= 1 & time <= 3)) %>% 
+  mutate(period = case_when(
+    time >= -2 & time <= 0 ~ 'pre',
+    time >= 1 & time <= 3 ~ 'post'
+  )) %>% 
+  group_by(subject, story_id, noise_condition, period) %>% 
+  summarize(proportion = mean(proportion), .groups = 'drop') %>% 
+  pivot_wider(names_from = period, values_from = proportion) %>% 
+  mutate(proportion = post - pre) %>% 
+	lmer(proportion ~ noise_condition + (1 | subject) + (1 | story_id), data=.)
+
+anova(model)
+eta_squared(model, alternative = 'two.sided')
+
+model %>% 
+	emmeans(~ noise_condition) %>% 
+	pairs() 
+```
+
+### Latency of Noise
+
+```{r}
+model = sliding_complete %>%
+  filter(time >= 0, time <= 6, boundary_type == "previous_event_end") %>%
+  group_by(subject, story_id, noise_condition) %>%
+	summarise(
+		latency = sum(time * proportion) / sum(proportion),
+		total_response = sum(proportion),
+		.groups = 'drop'
+	) %>% 
+	lmer(latency ~ noise_condition + (1 | subject) + (1 | story_id), data = .)
+
+anova(model)
+eta_squared(model, alternative = 'two.sided')
+
+model %>% 
+	emmeans(~ noise_condition) %>% 
+	pairs() 
+```
+
+## Plot
+
+### Event Boundary vs. Event Centre
+
+#### Event Start
+
+```{r}
+p4 = sliding_complete %>% 
+  filter(boundary_type %in% c('event_start', 'centre_start'),
+         -3 <= time & time <= 2) %>% 
+  mutate(period = case_when(
+    time <= -1 ~ 'pre',
+    0 <= time & time <= 2 ~ 'post',
+  )) %>% 
+  filter(!is.na(period)) %>% 
+  mutate(period = factor(period, levels = c('pre', 'post'))) %>% 
+  group_by(subject, boundary_type, period) %>% 
+  summarise(proportion = mean(proportion), .groups = 'drop') %>% 
+  ggplot(aes(period, proportion, fill = boundary_type)) +
+  stat_summary(fun.data = mean_se, geom = 'bar', position = 'dodge') +
+  scale_x_discrete(labels = c('Pre', 'Post')) +
+	scale_fill_manual(values = colours[4:5], labels = c('Event Centre', 'Event Boundary')) +
+  geom_line(aes(group = paste(subject, period)), alpha = 0.1, 
+            position = position_nudge(c(-0.23,0.23))) +
+	stat_summary(fun.data = mean_se, geom = 'errorbar', width = 0.2, 
+	             linewidth = 1, position = position_dodge(width = 0.9)) +
+	labs(x = 'Boundary Period', y = 'Average Proportion of Events [0,2]') +
+	theme_ggdist() +
+	theme(legend.title = element_blank(), legend.position = 'none')
+
+p4
+```
+
+```{r}
+p5 = sliding_complete %>% 
+  filter(boundary_type %in% c('event_start', 'centre_start')) %>% 
+  mutate(period = if_else(time < 0, 'pre', 'post')) %>% 
+  mutate(period = factor(period, levels = c('pre', 'post'))) %>% 
+  group_by(subject, boundary_type, time) %>%
+  summarize(proportion = mean(proportion), .groups = 'drop') %>% 
+  ggplot(aes(time, proportion, colour = boundary_type, fill = boundary_type)) +
+  stat_summary(fun = mean, geom = "line", size = 1) + 
+  stat_summary(fun.data = "mean_se", 
+               geom = "ribbon", alpha = 0.2, colour = NA) +
+  scale_fill_manual(values = colours[4:5], labels = c('Event Centre', 'Event Boundary')) +
+  scale_colour_manual(values = colours[4:5], labels = c('Event Centre', 'Event Boundary')) +
+  geom_vline(xintercept = 0, linetype = "dotted", colour = "grey", size = 1) +
+  labs(x = 'Time (s)', y = 'Proportion of Event Boundaries') +
+  xlim(-10, 12) +
+	theme_ggdist() +
+	theme(legend.title = element_blank(), legend.position = 'top')
+
+p5  
+```
+
+#### Event Offset
+
+```{r}
+p6 = sliding_complete %>% 
+  filter(boundary_type %in% c('previous_event_end', 'previous_centre_end'),
+         -2 <= time & time <= 3) %>% 
+  mutate(period = case_when(
+    time <= 0 ~ 'pre',
+    1 <= time & time <= 3 ~ 'post',
+  )) %>% 
+  filter(!is.na(period)) %>% 
+  mutate(period = factor(period, levels = c('pre', 'post'))) %>% 
+  group_by(subject, boundary_type, period) %>% 
+  summarise(proportion = mean(proportion), .groups = 'drop') %>% 
+  ggplot(aes(period, proportion, fill = boundary_type)) +
+  stat_summary(fun.data = mean_se, geom = 'bar', position = 'dodge') +
+  scale_x_discrete(labels = c('Pre', 'Post')) +
+	scale_fill_manual(values = colours[4:5], labels = c('Event Centre', 'Event Boundary')) +
+  geom_line(aes(group = paste(subject, period)), alpha = 0.1, 
+            position = position_nudge(c(-0.23,0.23))) +
+	stat_summary(fun.data = mean_se, geom = 'errorbar', width = 0.2, 
+	             linewidth = 1, position = position_dodge(width = 0.9)) +
+	labs(x = 'Boundary Period', y = 'Average Proportion of Events [1,3]') +
+	theme_ggdist() +
+	theme(legend.title = element_blank(), legend.position = 'none')
+
+p6
+```
+
+```{r}
+p7 = sliding_complete %>% 
+  filter(boundary_type %in% c('previous_event_end', 'previous_centre_end')) %>% 
+  mutate(period = if_else(time < 0, 'pre', 'post')) %>% 
+  mutate(period = factor(period, levels = c('pre', 'post'))) %>% 
+  group_by(subject, boundary_type, time) %>%
+  summarize(proportion = mean(proportion), .groups = 'drop') %>% 
+  ggplot(aes(time, proportion, colour = boundary_type, fill = boundary_type)) +
+  stat_summary(fun = mean, geom = "line", size = 1) + 
+  stat_summary(fun.data = "mean_se", 
+               geom = "ribbon", alpha = 0.2, colour = NA) +
+  scale_fill_manual(values = colours[4:5], labels = c('Event Centre', 'Event Boundary')) +
+  scale_colour_manual(values = colours[4:5], labels = c('Event Centre', 'Event Boundary')) +
+  geom_vline(xintercept = 0, linetype = "dotted", colour = "grey", size = 1) +
+  labs(x = 'Time (s)', y = 'Proportion of Event Boundaries') +
+  xlim(-10, 12) +
+	theme_ggdist() +
+	theme(legend.title = element_blank(), legend.position = 'none')
+
+p7
+```
+
+### Noise
+
+#### Event End
+
+```{r}
+p8 = sliding_complete %>%
+  filter(boundary_type == 'previous_event_end') %>% 
+  ggplot(aes(x = time, y = proportion, colour = noise_condition, fill = noise_condition)) + 
+  stat_summary(aes(group = noise_condition), fun = mean, geom = "line", size = 1) + 
+  stat_summary(aes(group = noise_condition), fun.data = "mean_se", 
+               geom = "ribbon", alpha = 0.2, colour = NA) +
+  labs(x = 'Time (s)', y = 'Proportion of Event Boundaries') +
+  scale_fill_manual(values = colours, labels = c('-4SNR' = '-4 dB SNR',
+                                                   '+2SNR' = '+2 dB SNR',
+                                                   'clear' = 'clear')) +
+  scale_colour_manual(values = colours, labels = c('-4SNR' = '-4 dB SNR',
+                                                   '+2SNR' = '+2 dB SNR',
+                                                   'clear' = 'clear')) +
+  geom_vline(xintercept = 0, linetype = "dotted", colour = "grey", size = 1) +
+  xlim(-10, 12) +
+  theme_ggdist() + 
+  theme(legend.title = element_blank(),
+        legend.position = 'none')
+
+p8
+```
+
+```{r}
+p9 = sliding_complete %>% 
+  filter(boundary_type == 'previous_event_end', 
+         (time >= -2 & time <= 0) | (time >= 1 & time <= 3)) %>% 
+  mutate(period = case_when(
+    time >= -2 & time <= 0 ~ 'pre',
+    time >= 1 & time <= 3 ~ 'post'
+  )) %>% 
+  group_by(subject, story_id, noise_condition, period) %>% 
+  summarize(proportion = mean(proportion), .groups = 'drop') %>% 
+  pivot_wider(names_from = period, values_from = proportion) %>% 
+  mutate(proportion = post - pre) %>% 
+  ggplot(aes(noise_condition, proportion, fill = noise_condition)) +
+  stat_summary(fun.data = mean_se, geom = 'bar') +
+  scale_x_discrete(labels = c('-4 dB SNR', '+2 dB SNR', 'clear')) +
+	scale_fill_manual(values = colours) +
+  geom_line(aes(group = subject), alpha = 0.1) +
+	stat_summary(fun.data = mean_se, geom = 'errorbar', width = 0.2, linewidth = 1) +
+	labs(x = 'Noise Condition', y = 'Change in Proportion of Event Boundaries') +
+	theme_ggdist() +
+	theme(legend.position = 'none')
+  
+p9
+```
+
+### Latency
+
+#### Event End
+
+```{r}
+p10 = sliding_complete %>%
+  filter(time >= 0, time <= 6, boundary_type == 'previous_event_end') %>%
+  group_by(subject, story_id, noise_condition) %>%
+	summarise(
+		latency = sum(time * proportion) / sum(proportion),
+		total_response = sum(proportion),
+		.groups = 'drop'
+	) %>% 
+	ggplot(aes(noise_condition, latency, fill = noise_condition)) +
+  stat_summary(fun.data = mean_se, geom = 'bar') +
+  scale_x_discrete(labels = c('-4 dB SNR', '+2 dB SNR', 'clear')) +
+	scale_fill_manual(values = colours) +
+  geom_line(aes(group = subject), alpha = 0.1) +
+	stat_summary(fun.data = mean_se, geom = 'errorbar', width = 0.2, linewidth = 1) +
+	labs(x = 'Noise Condition', y = 'Latency (s)') +
+	theme_ggdist() +
+	theme(legend.position = 'none')
+
+p10
+```
+
+# Normative Boundary Salience Index
+
+## Analysis
+
+```{r}
+normative_data = auditory_data %>% 
+  mutate(story_id = as.character(story_id)) %>% 
+  select(subject, story_id, noise_condition, times) %>% 
+  left_join(
+    normative_boundaries %>% 
+      select(story_id, previous_end, num_participants),
+    by = 'story_id'
+  ) %>%
+  mutate(proportion = num_participants / 20,
+         within_window = times >= previous_end & times <= previous_end + 6) %>% 
+  group_by(subject, story_id, noise_condition, previous_end, proportion) %>%
+  summarize(boundary_identified = any(within_window), .groups = "drop") %>% 
+  mutate(boundary_identified = as.numeric(boundary_identified))
+```
+
+## Statistics
+
+```{r}
+model = normative_data %>% 
+  glmer(boundary_identified ~ proportion * noise_condition + (1 + proportion| subject) + (1 | story_id), family = 'binomial', data = ., control = glmerControl(optimizer = "bobyqa"))
+
+Anova(model, type = 'II')
+
+model %>% 
+  emtrends(~ noise_condition, var = "proportion") %>% 
+  pairs()
+
+model %>% 
+  emtrends(~ noise_condition, var = "proportion") %>% 
+  summary(infer = TRUE) 
+```
+
+## Plot
+
+```{r}
+predicted = ggpredict(model, terms = c("proportion [0:1 by=0.1]", "noise_condition")) %>%
+  rename(noise_condition = group)
+
+p11 = ggplot(normative_data, aes(proportion, boundary_identified, colour = noise_condition)) +
+  geom_ribbon(data = predicted, 
+              aes(x = x, ymin = conf.low, ymax = conf.high, fill = noise_condition), 
+              alpha = 0.1, inherit.aes = FALSE) +
+  geom_line(data = predicted, 
+            aes(x = x, y = predicted, colour = noise_condition), 
+            size = 1.5, inherit.aes = FALSE, show.legend = FALSE) +
+  scale_colour_manual(values = colours, labels = c('-4 dB SNR', '+2 dB SNR', 'clear')) +
+  scale_fill_manual(values = colours, labels = c('-4 dB SNR', '+2 dB SNR', 'clear')) +
+  labs(x = "Salience Index",
+       y = "Probability of Boundary Detection",
+       colour = NULL) +
+  theme_ggdist() +
+  xlim(0.4, 1) +
+  theme(strip.background = element_blank(),
+        strip.text = element_blank(),
+        legend.position = 'top',
+        legend.title = element_blank(),
+        text = element_text(size = 14))
+
+p11
+```

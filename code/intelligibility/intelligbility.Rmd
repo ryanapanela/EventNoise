@@ -36,6 +36,9 @@ colours = c('#44c3dc','#4f74c9', '#eb6a5e','#38B686', '#3895B6','#5456BC')
 ## Import Masters
 
 ```{r}
+data_dir = '../../data/intelligibility/'
+setwd(data_dir)
+
 intelligibility_data = read_csv('intelligibility_responses.csv')
 ```
 
