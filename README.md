@@ -1,4 +1,4 @@
-# EventNoise: Perception and Encoding of Narrative Events During Speech Listening in Background Noise
+# Perception and Encoding of Narrative Events During Speech Listening in Background Noise
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
