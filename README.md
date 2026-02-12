@@ -96,7 +96,6 @@ lmerTest
 lm.beta
 emmeans
 effectsize
-ggplot2
 ggdist
 ggeffects
 ```
