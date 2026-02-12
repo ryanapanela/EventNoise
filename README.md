@@ -86,6 +86,7 @@ EventNoise/
 psychopy=2023.2.3
 numpy>=2.4
 pandas==3.0.0
+pygame==2.5.0
 ```
 
 ### For analyses (R)
