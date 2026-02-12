@@ -33,7 +33,7 @@ EventNoise/
 │   │   ├── event_recall.csv       # Scored recall data
 │   │   └── transcripts/           # Raw recall transcriptions (N=34)
 │   ├── segmentation/              # Event segmentation data
-│   │   ├── agreement.csv          # Inter-rater agreement
+│   │   ├── agreement.csv          # Agreement index results
 │   │   ├── auditory_data.csv      # Main segmentation data
 │   │   ├── auditory_series.csv    # Time-series data
 │   │   └── sliding_*.csv          # Sliding window analyses
